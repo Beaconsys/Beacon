@@ -1,0 +1,1 @@
+void daemonize(const char *);
