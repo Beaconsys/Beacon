@@ -14,7 +14,7 @@ Step to obtain the data:
 - We share the link here
 - Anyone can obtian these data by access the link
 
-We are now peaparing open source data and will open source gradually.
+We are now peaparing data and will open source gradually.
 
 
 Contact us:
