@@ -8,12 +8,12 @@ We are now cleaning up our codes and gradually open source Beacon code/Data coll
 ☤ sys
 ------------
 
-Our code will be opened source in this directory, including monitoring module, analysis module and web interface. For more detailed information， just read README in sys directory.
+Our code will be opened source in this directory, including monitoring module, analysis module and web interface. For more detailed information, just read README in sys directory.
 
 ☤ data
 ------------
 
-The data collected by Beacon will be opened source in this directory. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually.
+The data collected by Beacon will be opened source in this directory. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually. For more detailed information, just read README in sys directory.
 
 Step to obtain the data:
 
