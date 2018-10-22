@@ -13,7 +13,7 @@ Our code will be opened source in this directory, including monitoring module, a
 ☤ data
 ------------
 
-The data collected by Beacon will be opened source in this directory. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually. For more detailed information, just read README in sys directory.
+The data collected by Beacon will be opened source in this directory. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually. For more detailed information, just read README in data directory.
 
 Step to obtain the data:
 
