@@ -1,0 +1,340 @@
+CABID=`/bin/cal_cabid`        
+echo "cabid: $CABID"    
+if [ $CABID -eq 0 ] && [ $MIDPID -eq 0 ]; then         
+        ln -s /etc/lwfs/lwfs_gio081.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 0 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio081.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 0 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio082.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 0 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio082.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 1 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio105.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 1 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio105.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 1 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio085.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 1 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio085.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 2 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio087.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 2 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio087.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 2 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio088.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 2 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio088.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 3 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio089.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 3 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio089.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 3 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio090.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 3 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio090.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 4 ] && [ $MIDPID -eq 0 ]; then                                                
+        ln -s /etc/lwfs/lwfs_gio093.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 4 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio093.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 4 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio136.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 4 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio136.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 5 ] && [ $MIDPID -eq 0 ]; then                                                
+        ln -s /etc/lwfs/lwfs_gio097.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 5 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio097.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 5 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio099.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 5 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio099.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 6 ] && [ $MIDPID -eq 0 ]; then                                                
+        ln -s /etc/lwfs/lwfs_gio101.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 6 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio101.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 6 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio103.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 6 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio103.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 7 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio091.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 7 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio091.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 7 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio092.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 7 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio092.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 8 ] && [ $MIDPID -eq 0 ]; then                                                
+        ln -s /etc/lwfs/lwfs_gio130.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 8 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio130.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 8 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio131.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 8 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio131.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 9 ] && [ $MIDPID -eq 0 ]; then                                                
+        ln -s /etc/lwfs/lwfs_gio140.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 9 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio140.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 9 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio133.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 9 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio133.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 10 ] && [ $MIDPID -eq 0 ]; then                                                
+        ln -s /etc/lwfs/lwfs_gio134.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 10 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio134.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 10 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio135.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 10 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio135.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 11 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio096.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 11 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio096.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 11 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio063.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 11 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio063.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 12 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio100.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 12 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio100.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 12 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio102.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 12 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio102.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 13 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio128.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 13 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio128.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 13 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio129.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 13 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio129.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 14 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio104.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 14 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio104.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 14 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio137.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 14 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio137.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 15 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio056.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 15 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio056.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 15 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio086.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 15 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio086.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 16 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio083.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 16 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio083.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 16 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio095.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 16 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio095.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 17 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio030.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 17 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio030.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 17 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio127.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 17 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio127.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 18 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio141.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 18 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio141.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 18 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio142.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 18 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio142.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 19 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio143.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 19 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio143.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 19 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio144.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 19 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio144.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 20 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio107.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 20 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio107.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 20 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio108.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 20 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio108.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 21 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio109.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 21 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio109.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 21 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio110.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 21 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio110.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 22 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio111.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 22 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio111.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 22 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio112.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 22 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio112.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 23 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio113.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 23 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio113.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 23 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio055.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 23 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio055.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 24 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio121.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 24 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio121.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 24 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio116.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 24 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio116.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 25 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio117.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 25 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio117.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 25 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio118.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 25 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio118.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 26 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio119.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 26 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio119.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 26 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio120.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 26 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio120.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 27 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio122.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 27 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio122.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 27 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio094.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 27 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio094.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 28 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio124.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 28 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio124.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 28 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio125.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 28 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio125.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 29 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio138.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 29 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio138.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 29 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio139.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 29 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio139.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 30 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio023.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 30 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio023.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 30 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio024.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 30 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio024.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 31 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio025.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 31 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio025.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 31 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio026.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 31 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio026.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 32 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio027.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 32 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio027.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 32 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio028.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 32 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio028.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 33 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio029.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 33 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio029.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 33 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio044.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 33 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio044.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 34 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio031.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 34 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio031.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 34 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio045.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 34 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio045.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 35 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio033.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 35 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio033.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 35 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio034.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 35 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio034.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 36 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio035.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 36 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio035.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 36 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio036.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 36 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio036.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 37 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio037.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 37 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio037.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 37 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio038.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 37 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio038.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 38 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio039.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 38 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio039.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 38 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio040.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 38 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio040.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 39 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio041.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 39 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio041.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 39 ] && [ $MIDPID -eq 2 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio042.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 39 ] && [ $MIDPID -eq 3 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio042.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 48 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio126.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 48 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio126.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 48 ] && [ $MIDPID -eq 2 ]; then
+   	ln -s /etc/lwfs/lwfs_gio020_tcp.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 49 ] && [ $MIDPID -eq 0 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio043.vol /etc/lwfs/lwfs.vol
+if [ $CABID -eq 49 ] && [ $MIDPID -eq 1 ]; then                                                  
+        ln -s /etc/lwfs/lwfs_gio043.vol /etc/lwfs/lwfs.vol
+#echo "============ Testing lwfs mount ========================="
+#taskset 0x1 /usr/local/sbin/lwfs -f /etc/lwfs/lwfs.vol -l /dev/shm/lwfs.log /home/export/online1
+#taskset 0x10 /usr/local/sbin/lwfs -f /etc/lwfs/lwfs.vol -l /dev/shm/lwfs.log /home/export/online1
+#taskset 0x100 /usr/local/sbin/lwfs -f /etc/lwfs/lwfs.vol -l /dev/shm/lwfs.log /home/export/online1
+#taskset 0x1000 /usr/local/sbin/lwfs -f /etc/lwfs/lwfs.vol -l /dev/shm/lwfs.log /home/export/online1
+#echo "============ Testing lwfs mount End========================="
+PID=`ps | grep lwfs | grep -v grep | awk '{print $1}'`; echo -17 > /proc/$PID/oom_adj
+PID=`ps | grep lwfs | grep -v grep | awk '{print $1}'`; echo -17 > /proc/$PID/oom_adj
