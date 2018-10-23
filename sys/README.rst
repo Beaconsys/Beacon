@@ -7,6 +7,16 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 ------------
 
 In this directory, we will open source our code,including Beacon's monitoring module, analysis module and web interface.
+
+☤ Monitoring_module
+------------
+
+☤ Analysis_script
+------------
+
+☤ Web_interface
+------------
+
    
 Contact us:   
 
