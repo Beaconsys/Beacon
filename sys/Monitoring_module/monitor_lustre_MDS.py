@@ -5,21 +5,40 @@ import socket
 import sys
 import os
 import string
-import datetime,time 
+import datetime, time
 from optparse import OptionParser
- 
+
 parser = OptionParser()
-parser.add_option("-g", "--gio", default = True, action = "store_true", help = "collect I/O behabiors from online1", dest = "gio")
-parser.add_option("-b", "--bio", default = False, action = "store_true", help = "collect I/O behaviors from online2", dest = "bio")
-parser.add_option("-n", "--need_help", default = False, action = "store_true", help = "show detail information", dest = "need_help")
-(options,args) = parser.parse_args()
+parser.add_option(
+    "-g",
+    "--gio",
+    default=True,
+    action="store_true",
+    help="collect I/O behabiors from online1",
+    dest="gio")
+parser.add_option(
+    "-b",
+    "--bio",
+    default=False,
+    action="store_true",
+    help="collect I/O behaviors from online2",
+    dest="bio")
+parser.add_option(
+    "-n",
+    "--need_help",
+    default=False,
+    action="store_true",
+    help="show detail information",
+    dest="need_help")
+(options, args) = parser.parse_args()
+
 
 def collect_lustre_mds_gio(cluster_ip, port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((cluster_ip, port))
     dir = '/proc/fs/lustre/mdt/gswgfs-MDT0000/exports/'
     mes = [0 for i in range(500)]
-    while(1):
+    while (1):
         count = 0
         for filename in os.listdir(dir):
             if 'o2ib' in filename:
@@ -30,7 +49,7 @@ def collect_lustre_mds_gio(cluster_ip, port):
                 lines = file.readlines()
                 for i in range(1, len(lines)):
                     sre = lines[i]
-                    str = sre.split()	
+                    str = sre.split()
                     message = message + " " + str[0] + " " + str[1]
                 if message <> mes[count]:
                     mes[count] = message
@@ -41,12 +60,13 @@ def collect_lustre_mds_gio(cluster_ip, port):
         time.sleep(1)
     s.close()
 
+
 def collect_lustre_mds_bio(cluster_ip, port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((cluster_ip, port))
     dir = '/proc/fs/lustre/mdt/bswgfs-MDT0000/exports/'
     mes = [0 for i in range(500)]
-    while(1):
+    while (1):
         count = 0
         for filename in os.listdir(dir):
             if 'o2ib' in filename:
@@ -57,7 +77,7 @@ def collect_lustre_mds_bio(cluster_ip, port):
                 lines = file.readlines()
                 for i in range(1, len(lines)):
                     sre = lines[i]
-                    str = sre.split()	
+                    str = sre.split()
                     message = message + " " + str[0] + " " + str[1]
                 if message <> mes[count]:
                     mes[count] = message
@@ -67,6 +87,7 @@ def collect_lustre_mds_bio(cluster_ip, port):
                 file.close()
         time.sleep(1)
     s.close()
+
 
 if __name__ == "__main__":
     if options.need_help == True:
@@ -81,4 +102,3 @@ if __name__ == "__main__":
         cluster_ip = '20.0.8.86'
         port = 9987
         collect_lustre_MDS_gio(cluster_ip, port)
-

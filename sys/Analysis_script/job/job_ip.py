@@ -1,5 +1,5 @@
 import MySQLdb
-import datetime,time
+import datetime, time
 import MySQLdb.cursors
 import matplotlib.pyplot as plt
 import math
@@ -12,8 +12,14 @@ SQL_db = ""
 SQL_passwd = ""
 SQL_port = ""
 
+
 def findjob(time1, time2):  #RUNTIME cover time1 and time2
-    conn = MySQLdb.connect(host=SQL_host, user=SQL_user, db=SQL_db, passwd=SQL_passwd, port=SQL_port)
+    conn = MySQLdb.connect(
+        host=SQL_host,
+        user=SQL_user,
+        db=SQL_db,
+        passwd=SQL_passwd,
+        port=SQL_port)
     print "connect succeed"
     try:
         cursor = conn.cursor()
@@ -21,8 +27,10 @@ def findjob(time1, time2):  #RUNTIME cover time1 and time2
         item2 = "ENDTIME = '0000-00-00 00:00:00'" + " and STARTTIME <= '" + time1 + "'"
         ite = "NODELIST <> '-' and RUNTIME <> 0"
         ite1 = "QUEUE not like '%x86%'"
-        sql1 = ("select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from JOB_log_all where " 
-                + ite + " and " + ite1 + " and ( " + item1 + " or " + item2 + " ) order by PROGRAM_NAME")
+        sql1 = (
+            "select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from JOB_log_all where "
+            + ite + " and " + ite1 + " and ( " + item1 + " or " + item2 +
+            " ) order by PROGRAM_NAME")
         cursor.execute(sql1)
         result1 = cursor.fetchall()
         conn.commit()
@@ -46,14 +54,21 @@ def findjob(time1, time2):  #RUNTIME cover time1 and time2
                 core = val[7]
                 node = val[8]
                 node = node.split(",")
-                resu.append([id, jname, pname, stime, etime, atime, cnc, core, node])
+                resu.append(
+                    [id, jname, pname, stime, etime, atime, cnc, core, node])
     except Exception as e:
         print e
         conn.rollback()
     return resu
 
+
 def searchjob(time1, time2):  #ENDTIME between time1 and time2
-    conn = MySQLdb.connect(host=SQL_host, user=SQL_user, db=SQL_db, passwd=SQL_passwd, port=SQL_port)
+    conn = MySQLdb.connect(
+        host=SQL_host,
+        user=SQL_user,
+        db=SQL_db,
+        passwd=SQL_passwd,
+        port=SQL_port)
     print 'connect succeed'
     try:
         cursor = conn.cursor()
@@ -62,8 +77,10 @@ def searchjob(time1, time2):  #ENDTIME between time1 and time2
         item3 = "ENDTIME = '0000-00-00 00:00:00'" + " and STARTTIME < '" + time2 + "'"
         ite = "NODELIST <> '-' and RUNTIME <> 0"
         ite1 = "QUEUE not like '%x86%'"
-        sql1 = ("select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from JOB_log_all where "
-               + ite + " and " + ite1 + " and " + item2 + " order by PROGRAM_NAME")
+        sql1 = (
+            "select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from JOB_log_all where "
+            + ite + " and " + ite1 + " and " + item2 +
+            " order by PROGRAM_NAME")
         cursor.execute(sql1)
         result1 = cursor.fetchall()
         conn.commit()
@@ -73,7 +90,7 @@ def searchjob(time1, time2):  #ENDTIME between time1 and time2
             re.append(date)
         re.sort()
         resu = []
-        if len(re)<1:
+        if len(re) < 1:
             print "NONE"
         else:
             for val in re:
@@ -87,14 +104,21 @@ def searchjob(time1, time2):  #ENDTIME between time1 and time2
                 core = val[7]
                 node = val[8]
                 node = node.split(",")
-                resu.append([id, jname, pname, stime, etime, atime, cnc, core, node])
+                resu.append(
+                    [id, jname, pname, stime, etime, atime, cnc, core, node])
     except Exception as e:
         print e
         conn.rollback()
     return resu
 
-def get_re(time1, time2):#Run time between time1 and time2
-    conn = MySQLdb.connect(host=SQL_host, user=SQL_user, db=SQL_db, passwd=SQL_passwd, port=SQL_port)
+
+def get_re(time1, time2):  #Run time between time1 and time2
+    conn = MySQLdb.connect(
+        host=SQL_host,
+        user=SQL_user,
+        db=SQL_db,
+        passwd=SQL_passwd,
+        port=SQL_port)
     print "connect succeed"
     try:
         cursor = conn.cursor()
@@ -103,8 +127,10 @@ def get_re(time1, time2):#Run time between time1 and time2
         item3 = "ENDTIME = '0000-00-00 00:00:00'" + " and STARTTIME < '" + time2 + "'"
         ite = "NODELIST <> '-' and RUNTIME <> 0 and CORE<>0"
         ite1 = "QUEUE not like '%x86%'"
-        sql1 = ("select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from JOB_log_all where "
-                + ite + " and " + ite1 + " and " + "( " + item1 + " or " + item2 + " or " + item3 + " ) order by PROGRAM_NAME")
+        sql1 = (
+            "select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from JOB_log_all where "
+            + ite + " and " + ite1 + " and " + "( " + item1 + " or " + item2 +
+            " or " + item3 + " ) order by PROGRAM_NAME")
         cursor.execute(sql1)
         result1 = cursor.fetchall()
         conn.commit()
@@ -113,7 +139,7 @@ def get_re(time1, time2):#Run time between time1 and time2
         for date in result1:
             re.append(date)
         resu = []
-        if len(re)<1:
+        if len(re) < 1:
             print "NONE"
         else:
             for val in re:
@@ -127,21 +153,26 @@ def get_re(time1, time2):#Run time between time1 and time2
                 core = val[7]
                 node = val[8]
                 node = node.split(",")
-                resu.append([id, jname, pname, stime, etime, atime, cnc, core, node])
+                resu.append(
+                    [id, jname, pname, stime, etime, atime, cnc, core, node])
     except Exception as e:
         print e
     conn.rollback()
     return resu
 
+
 def get_re_jobid(jobid):
-    conn = MySQLdb.connect(host=SQL_host, user=SQL_user, db=SQL_db, passwd=SQL_db, port=SQL_port)
+    conn = MySQLdb.connect(
+        host=SQL_host, user=SQL_user, db=SQL_db, passwd=SQL_db, port=SQL_port)
     print "connect succeed"
     resu = []
     try:
         cursor = conn.cursor()
         database = "JOB_log_all"
-        sql1 = ("select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from " + database + 
-                " where jobid=" + str(jobid) + " and RUNTIME<>0 order by PROGRAM_NAME")
+        sql1 = (
+            "select JOBID,JOB_NAME,PROGRAM_NAME,STARTTIME,ENDTIME,RUNTIME,CNC,CORE,NODELIST from "
+            + database + " where jobid=" + str(jobid) +
+            " and RUNTIME<>0 order by PROGRAM_NAME")
         cursor.execute(sql1)
         result1 = cursor.fetchall()
         conn.commit()
@@ -150,7 +181,7 @@ def get_re_jobid(jobid):
         for date in result1:
             re.append(date)
         re.sort()
-        if len(re)<1:
+        if len(re) < 1:
             print "NONE"
         else:
             for val in re:
@@ -164,11 +195,13 @@ def get_re_jobid(jobid):
                 core = val[7]
                 node = val[8]
                 node = node.split(",")
-                resu.append([id, jname, pname, stime, etime, atime, cnc, core, node])
+                resu.append(
+                    [id, jname, pname, stime, etime, atime, cnc, core, node])
     except Exception as e:
         print e
         conn.rollback()
     return resu
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -177,5 +210,5 @@ if __name__ == "__main__":
     time1 = sys.argv[1] + " " + sys.argv[2]
     time2 = sys.argv[3] + " " + sys.argv[4]
     #jobid = sys.argv[5]
-    results = get_re(time1,time2)
+    results = get_re(time1, time2)
     #results = get_re_jobid(jobid)

@@ -2,7 +2,7 @@ import socket
 import sys
 import os
 import string
-import datetime,time 
+import datetime, time
 
 es_server = ""
 trace_file = ""
@@ -22,11 +22,12 @@ print host
 print es_server
 print trace_file
 
-s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((es_server, 9987))
 
 #FLUSH_FREQUENCE = 10
 FLUSH_FREQUENCE = 3600 * 24 * 10
+
 
 def GetSendTrace():
     timer = 0
@@ -39,13 +40,13 @@ def GetSendTrace():
             time.sleep(0.1)
             timer += 1
         elif "Trace" in line:
-            #Remove the useless information, TODO use regex. 
+            #Remove the useless information, TODO use regex.
             line = line.replace("N [sw-threads.c:85:record_log]", "")
             line = line.replace("N [sw-threads.c:93:record_log]", "")
             line = line.replace("N [sw-threads.c:97:record_log]", "")
-            s.send(line);
+            s.send(line)
             #print line
-            
+
         if timer == FLUSH_FREQUENCE:
             break
 
