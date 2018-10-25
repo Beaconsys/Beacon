@@ -18,6 +18,20 @@ These scripts are all our scripts to deal with mass data collected by Beacon, in
  - job_ip.py
  - jobcount_coreutilize.py
  
+☤ About LWFS_client directory
+------------ 
+ 
+☤ About LWFS_server directory
+------------ 
+
+☤ About lustre_client directory
+------------ 
+
+☤ About LWFS_server directory
+------------ 
+
+☤ About MDS directory
+------------ 
 
   
  
