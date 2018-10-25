@@ -6,7 +6,7 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 ☤ About Analysis_script directory
 ------------
 
-These scripts are all our scripts to deal with mass data collected by Beacon, including scripts query ES(LWFS, lustre), mysql(job database). We classfy these scripts in to serveral categories as you can see some subdirectories in this directory.
+These scripts are all our scripts to deal with mass data collected by Beacon, including scripts query ES(LWFS, lustre), mysql(job database). We classify these scripts in to serveral categories as you can see some subdirectories in this directory.
 
 ☤ About Job directory
 ------------
