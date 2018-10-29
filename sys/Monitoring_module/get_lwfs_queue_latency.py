@@ -8,14 +8,22 @@ es_server = ""
 trace_file = ""
 host = socket.gethostname()
 
+ES_host_online2 = ""
+online2_id = null
+ES_host_online1 = ""
+online1_id = null
+ES_host_testbed = ""
+testbed_id = null
+
+
 if "vbfs" in host:
-    es_server = "20.0.8.93"
+    es_server = ES_host_online2
     trace_file = "/var/log/lwfs/etc-lwfs-lwfsd.vol.log"
 if "gio" in host:
-    es_server = "20.0.8.91"
+    es_server = ES_host_online1
     trace_file = "/var/log/lwfs/etc-lwfs-lwfsd.vol.log"
 if "testhost" in host:
-    es_server = "20.0.8.95"
+    es_server = ES_host_testbed
     trace_file = "/var/log/lwfs/lwfs_testbed.log"
 
 print host
