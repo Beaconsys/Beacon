@@ -115,3 +115,7 @@ There are 3 py files in this directory, including
 - query_MDS.py
     (A function, including query body)
 - draw.py (This script is used to visualize results)
+
+Contact us:   
+
+Email: tianyuzhang1214@163.com.
