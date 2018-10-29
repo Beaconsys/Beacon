@@ -23,17 +23,20 @@ In this directory, we plan to open source our code which is used to collect data
     (This script is used to collect I/O behavior on lustre clients, including RPC requests)
 .. code:: python
 
-        python monitor_lustre_client.py
+        python monitor_lustre_client.py -g
+        # -g means collect data from default configuration, for more detail information use -n
 - monitor_lustre_server.py
     (This script is used to collect I/O behavior on lustre servers, including OST status)
 .. code:: python
 
-        python monitor_lustre_server.py
+        python monitor_lustre_server.py -g
+        # -g means collect data from default configuration, for more detail information use -n
 - monitor_lustre_MDS.py
     (This script is used to collect I/O behavior on metadata nodes)
 .. code:: python
 
-        python monitor_lustr_MDS.py    
+        python monitor_lustr_MDS.py -g
+        # -g means collect data from default configuration, for more detail information use -n
 
 Contact us:   
 Email: tianyuzhang1214@163.com.
