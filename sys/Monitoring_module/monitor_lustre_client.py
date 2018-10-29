@@ -218,16 +218,19 @@ def collect_lustre_server_bio(cluster_ip, port):
     s.close()
 
 if __name__ == "__main__":
+    filesys1_host = ""
+    filesys2_host = ""
+    filesys1_port = null
+    filesys2_port = null
     if options.need_help == True:
         print "-g collect I/O behabiors from online1"
         print "-b collect I/O behabiors from online2"
         print "-n help information"
     elif options.bio == True:
-        cluster_ip = '20.0.8.89'
-        port = 9987
+        cluster_ip = filesys2_host
+        port = filesys2_port
         collect_lustre_server_bio(cluster_ip, port)
     else:
-        print "gio"
-        cluster_ip = '20.0.8.87'
-        port = 9987
+        cluster_ip = filesys1_host
+        port = filesys1_port
         collect_lustre_server_gio(cluster_ip, port)
