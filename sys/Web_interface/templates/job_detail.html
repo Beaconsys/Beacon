@@ -1,0 +1,153 @@
+{% extends "base.html" %} {% block content %}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="{{ url_for('.index') }}"><span
+					class="glyphicon glyphicon-home"></span></a></li>
+			<li class="active">Job Information</li>
+		</ol>
+	</div>
+    {% if message %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header" style="color:red;">{{ message }}</h1>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header" style="color:tomato">Job {{ job[0] }}</h1>
+        </div>
+    </div>
+    <br/><br/>
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="panel panel-blue panel-widget">
+                <div class="row no-padding">
+                    <div class="col-sm-3 col-lg-5 widget-left">
+                        <em class="glyphicon glyphicon-user glyphicon-l"></em>
+                    </div>
+                    <div class="col-sm-9 col-lg-7 widget-right">
+                        <div class="large">{{ job[1] }}</div>
+                        <div style="color:purple">user</div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="panel panel-red panel-widget">
+                <div class="row no-padding">
+                    <div class="col-sm-3 col-lg-5 widget-left">
+                        <em class="glyphicon glyphicon-folder-close glyphicon-l"></em>
+                    </div>
+                    <div class="col-sm-9 col-lg-7 widget-right">
+                        <div class="large">{{ job[12] }}</div>
+                        <div style="color:purple">job</div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="panel panel-teal panel-widget">
+                <div class="row no-padding">
+                    <div class="col-sm-3 col-lg-5 widget-left">
+                        <em class="glyphicon glyphicon-stop glyphicon-l"></em>
+                    </div>
+                    <div class="col-sm-9 col-lg-7 widget-right">
+                        <div class="large">{{ job[5] }}</div>
+                        <div style="color:purple">core</div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            <div class="panel panel-orange panel-widget">
+                <div class="row no-padding">
+                    <div class="col-sm-3 col-lg-5 widget-left">
+                        <em class="glyphicon glyphicon-time glyphicon-l"></em>
+                    </div>
+                    <div class="col-sm-9 col-lg-7 widget-right">
+                        <div class="large">{{ job[6] }}</div>
+                        <div style="color:purple">corehour</div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/>
+	<div class="row">
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Start Time</h4>
+					<div class="easypiechart" id="easypiechart-orange">
+						<span class="percent" id="max" style="font-size:22px">{{ job[8] }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>End Time</h4>
+					<div class="easypiechart" id="easypiechart-blue">
+						<span class="percent" id="min" style="font-size:22px">{{ job[9] }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Queue</h4>
+					<div class="easypiechart" id="easypiechart-teal">
+						<span class="percent" id="avg">{{ job[3] }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Status</h4>
+					<div class="easypiechart" id="easypiechart-red">
+						<span class="percent" id="total">{{ job[2] }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header" style="color:teal;">Node List</h1>
+            <h3 class="page-header" style="color:green;">Total: {{nodecount}}</h1>
+        </div>
+    </div>
+
+    <div class="row">
+		<div class="col-xs-12 col-md-12">
+			<table class="table table-bordered table-hover">
+                <tbody>
+                    {% for line in nodelist %}    
+                    <tr>
+                        {% for item in line %}
+                        <td>{{item}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                <tbody>              
+            <table>
+		</div>
+    </div>
+    {% endif %}
+</div>
+<!--/.main-->
+{% endblock %} {% block js %}
+<!--
+<script src="static/js/userspace.js"></script>
+<script type="text/javascript">
+	$("#nav_userspace").addClass("active");
+</script>
+-->
+{% endblock %}
