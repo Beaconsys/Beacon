@@ -3,13 +3,16 @@ from elasticsearch1 import helpers
 import elasticsearch1 as ES
 import random
 
+ES_host = ""
+ES_port = ""
+
 
 def search(time_s, time_e, host, index, host_t):
     time_start = time_s[:10] + "T" + time_s[11:] + ".000Z"
     time_end = time_e[:10] + "T" + time_e[11:] + ".000Z"
     #print time_start,"   ",time_end
-    host_all = "20.0.8." + str(host_t)
-    ES_SERVERS = [{'host': host_all, 'port': 9200}]
+    host_all = ES_host + str(host_t)
+    ES_SERVERS = [{'host': host_all, 'port': ES_port}]
     global es_client
     es_client = ES.Elasticsearch(hosts=ES_SERVERS)
 
@@ -25,8 +28,8 @@ def search_le(time_std, host, index, host_t):
     time_start = time_std[:10] + "T" + time_std[11:] + ".000Z"
     time_end = time_std[:10] + "T" + time_std[11:] + ".000Z"
     #print time_start,"   ",time_end
-    host_all = "20.0.8." + str(host_t)
-    ES_SERVERS = [{'host': host_all, 'port': 9200}]
+    host_all = ES_host + str(host_t)
+    ES_SERVERS = [{'host': host_all, 'port': ES_port}]
     global es_client
     es_client = ES.Elasticsearch(hosts=ES_SERVERS)
 
@@ -42,8 +45,8 @@ def search_gt(time_std, host, index, host_t):
     time_start = time_std[:10] + "T" + time_std[11:] + ".000Z"
     time_end = time_std[:10] + "T" + time_std[11:] + ".000Z"
     #print time_start,"   ",time_end
-    host_all = "20.0.8." + str(host_t)
-    ES_SERVERS = [{'host': host_all, 'port': 9200}]
+    host_all = ES_host + str(host_t)
+    ES_SERVERS = [{'host': host_all, 'port': ES_port}]
     global es_client
     es_client = ES.Elasticsearch(hosts=ES_SERVERS)
 
@@ -163,16 +166,10 @@ if __name__ == '__main__':
     time_s = '2017-10-10 08:00:00'
     time_e = '2017-12-20 08:00:00'
     host = []
-    for i in range(17, 144):
-        if i <> 90:
-            host.append('20.0.2.' + str(i))
-    for i in range(1, 90):
-        host.append('20.0.208.' + str(i))
-    index = '2017.11.17'
-    host_t = 87
+    fwd_id_list = []
+    for i in fwd_id_list:
+        host.append(i)
+    index = ""  #'2017.11.17'
+    host_t = 0
     final_results = search(time_s, time_e, host, index, host_t)
-    #print final_results[0]
-    #print final_results[1]
     print len(final_results[0])
-    #for item in final_results[0]:
-    #    print item

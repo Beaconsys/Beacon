@@ -6,9 +6,7 @@ import numpy as np
 import csv
 import os
 
-#MDS_open=[0 for i in xrange(100000)]
-#MDS_close=[0 for i in xrange(100000)]
-path = './MDS_CSV_vbfs'
+path = ""  # e.g. './MDS_CSV_vbfs'
 re = os.listdir(path)
 re.sort()
 max_mds = 0
@@ -29,7 +27,6 @@ for index in re:
             max_mds = MDS_open
             max_index = index
             maxtime = s
-
         if MDS_open < 1000:
             count_i += 1
         elif MDS_open < 2500:
