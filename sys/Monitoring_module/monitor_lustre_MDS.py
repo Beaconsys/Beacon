@@ -90,19 +90,19 @@ def collect_lustre_mds_bio(cluster_ip, port):
 
 
 if __name__ == "__main__":
-    MDS1_host = ""
-    MDS2_host = ""
-    MDS1_port = null
-    MDS2_port = null
+    filesys1_host = ""
+    filesys2_host = ""
+    filesys1_port = null
+    filesys2_port = null
     if options.need_help == True:
         print "-g collect I/O behabiors from online1"
         print "-b collect I/O behabiors from online2"
         print "-n help information"
     elif options.bio == True:
-        cluster_ip = MDS2_host
-        port = MDS2_port
+        cluster_ip = filesys2_host
+        port = filesys2_port
         collect_lustre_MDS_bio(cluster_ip, port)
     else:
-        cluster_ip = MDS1_host
-        port = MDS1_port
+        cluster_ip = filesys1_host
+        port = filesys1_port
         collect_lustre_MDS_gio(cluster_ip, port)
