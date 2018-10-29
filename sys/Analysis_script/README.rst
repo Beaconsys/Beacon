@@ -53,6 +53,6 @@ There are 3 py files in this directory, including
 .. code:: python
        
         python lustre_MDS.py time1 time2 -t
--t represents save trace, more detail information you can use -n
+        #-t represents save trace, more detail information you can use -n
 - query_MDS.py (This is a function, including query body)
 - draw.py (This script is used to visualize results)
