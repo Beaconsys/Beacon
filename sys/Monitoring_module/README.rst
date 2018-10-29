@@ -9,10 +9,31 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 In this directory, we plan to open source our code which is used to collect data on supercomputers, including monitoring on compute nodes, forwarding nodes, storage nodes and metadata nodes. We classify these scripts in to serveral categories as you can see some subdirectories in this directory.
 
 - get_lwfs_queue_lantency.py
+    (This script is used to collect I/O behavior on LWFS servers (on forwarding nodes))
+.. code:: python
+        
+        python get_lwfs_queue_latency.py
 - monitor_LWFS_client
+    (This directory including many c files which is used to collect data on compute nodes with an efficient compression method)
+.. code:: c
+    
+        make
+        ./a.out -t ES_host -p ES_port /io_behavior
 - monitor_lustre_client.py
+    (This script is used to collect I/O behavior on lustre clients, including RPC requests)
+.. code:: python
+
+        python monitor_lustre_client.py
 - monitor_lustre_server.py
+    (This script is used to collect I/O behavior on lustre servers, including OST status)
+.. code:: python
+
+        python monitor_lustre_server.py
 - monitor_lustre_MDS.py
+    (This script is used to collect I/O behavior on metadata nodes)
+.. code:: python
+
+        python monitor_lustr_MDS.py    
 
 Contact us:   
 Email: tianyuzhang1214@163.com.
