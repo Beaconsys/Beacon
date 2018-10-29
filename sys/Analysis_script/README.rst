@@ -34,6 +34,20 @@ First, we introduce job directory for you. You can see four file in this directo
  
 ☤ About LWFS_client directory
 ------------ 
+
+In this directory, you can find many scripts to operate data on the compute node.
+
+- abnormal_node_detect.py 
+   (This script is used to detect abnormal nodes by the given jobid)
+.. code:: python
+        
+        python abnormal_node_detect.py JOBID
+        # use jobid list, this script can detect anomaly automatically 
+- deal gnenrator.py (This script includes many function, is used to deal various messages)
+- es_search.py (A function, including query body)
+- es_search_fwd.py
+- es_search_ost.py
+...
  
 ☤ About LWFS_server directory
 ------------ 
@@ -54,5 +68,5 @@ There are 3 py files in this directory, including
        
         python lustre_MDS.py time1 time2 -t
         #-t represents save trace, more detail information you can use -n
-- query_MDS.py (This is a function, including query body)
+- query_MDS.py (A function, including query body)
 - draw.py (This script is used to visualize results)
