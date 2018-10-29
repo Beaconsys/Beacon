@@ -114,7 +114,8 @@ There are 3 py files in this directory, including
         #-t represents save trace, more detail information you can use -n
 - query_MDS.py
     (A function, including query body)
-- draw.py (This script is used to visualize results)
+- draw.py
+   (This script is used to visualize results)
 
 Contact us:   
 
