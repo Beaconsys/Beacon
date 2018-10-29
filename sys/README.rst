@@ -18,7 +18,7 @@ In this directory, we will open source our code which is used to analysis these 
 
 ☤ Web_interface
 ------------
-In this directory, we will open source our code which is used to show our users a websizte to make Beacon easy-to-use. For more detail inforamtion, just read READMe in this derectory
+In this directory, we will open source our code which is used to show our users a websizte to make Beacon easy-to-use. For more detail inforamtion, just read README in this derectory
 
    
 Contact us:   
