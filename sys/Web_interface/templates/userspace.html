@@ -1,0 +1,168 @@
+{% extends "base.html" %} {% block content %}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+	<div class="row">
+		<ol class="breadcrumb">
+			<li><a href="{{ url_for('.index') }}"><span
+					class="glyphicon glyphicon-home"></span></a></li>
+			<li class="active">User Space</li>
+		</ol>
+	</div>
+	<!--/.row-->
+	<!-- Start the Form -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<form id="form_iops" action="/userspace" method="post">
+						<div class="col-md-3">
+							<div class="form-group">
+								<label>User Name</label> <input class="form-control" name="username" id="username">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<label>Please input the job name</label>
+							<div class="form-group">
+								<input class="form-control" placeholder="e.g. wrf or wrf.exe" name="job_name">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<label>Please input the start time</label>
+							<div class="form-group">
+								<input class="form-control" placeholder="e.g. 2017-01-01 00:00:00" name="start_time">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<label>Please input the end time</label>
+							<div class="form-group">
+								<input class="form-control" placeholder="e.g. 2017-01-02 00:00:00" name="end_time">
+							</div>
+						</div>
+                        <div class="col-md-3">
+						    <input class="btn btn-primary" id="submit" type="submit" onclick="return check(this.form)" value='Query'>
+					    </div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /.col-->
+	</div>
+	<!-- /.row -->
+	<!-- End the Form -->
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+                {% if user %}
+                <div class="panel-heading" id="div_tip" style="color:green;">Welcome {{ user }}</div>
+                {% else %}
+				<div class="panel-heading" id="div_tip" style="color:green;">The query may take a long time. Please wait patiently.</div>
+                {% endif %}
+                <div class="panel-body">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Job ID</th>
+                                <th>Job Name</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Runtime</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        {% if result %}
+                        <tbody>
+                            {% for item in result %}
+                            <tr>                                                
+                                <td><a href="{{ url_for('job_detail',jobid=item[0]) }}">{{item[0]}}</a></td>
+                                <td>{{item[1]}}</td>
+                                <td>{{item[2]}}</td>
+                                <td>{{item[3]}}</td>
+                                <td>{{item[4]}}</td>
+                                {% if item[5] == 'Exit' %}
+                                <td style="color:red">{{item[5]}}</td>
+                                {% elif item[5] == 'Done' %}
+                                <td style="color:green">{{item[5]}}</td>
+                                {% elif item[5] == 'Run' %}
+                                <td style="color:blue">{{item[5]}}</td>
+                                {% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                        {% endif %}                
+                    </table>			  
+				</div>
+                {% if page_info %}
+                <div class="panel-body">                    
+                    <ul class="pagination">
+                        <li><a href="{{ url_for('userspace',username=page_info['username'],stime=page_info['stime'],etime=page_info['etime'],pages=page_info['pages'],page=1) }}"><span>First</span></a></li>
+                        {% if page_info['current_page'] == 1 %}
+                        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-backward"></span></a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('userspace',username=page_info['username'],stime=page_info['stime'],etime=page_info['etime'],pages=page_info['pages'],page=page_info['current_page']-1) }}">
+                            <span class="glyphicon glyphicon-backward"></span></a></li>
+                        {% endif %}
+                        <li class="active"><a href="#">{{page_info['current_page']}}</a></li>
+                        {% if page_info['current_page'] == page_info['pages'] %}
+                        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-forward"></a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('userspace',username=page_info['username'],stime=page_info['stime'],etime=page_info['etime'],pages=page_info['pages'],page=page_info['current_page']+1) }}">
+                            <span class="glyphicon glyphicon-forward"></a></li>
+                        {% endif %}
+                        <li><a href="{{ url_for('userspace',username=page_info['username'],stime=page_info['stime'],etime=page_info['etime'],pages=page_info['pages'],page=page_info['pages']) }}"><span>Last</span></a></li>
+                        <li><span>Total : {{page_info['pages']}}</span></li>
+                    </ul>
+                </div>
+                {% endif %}
+			</div>
+		</div>
+	</div>
+    <!-- 
+	<div class="row">
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Max Value</h4>
+					<div class="easypiechart" id="easypiechart-orange">
+						<span class="percent" id="max">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Min Value</h4>
+					<div class="easypiechart" id="easypiechart-blue">
+						<span class="percent" id="min">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Average</h4>
+					<div class="easypiechart" id="easypiechart-teal">
+						<span class="percent" id="avg">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-md-3">
+			<div class="panel panel-default">
+				<div class="panel-body easypiechart-panel">
+					<h4>Total</h4>
+					<div class="easypiechart" id="easypiechart-red">
+						<span class="percent" id="total">0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+</div>
+<!--/.main-->
+{% endblock %} {% block js %}
+<script src="static/js/userspace.js"></script>
+<script type="text/javascript">
+	$("#nav_userspace").addClass("active");
+</script>
+{% endblock %}

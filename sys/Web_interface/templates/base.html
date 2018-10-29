@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Beacon</title>
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/css/styles.css" rel="stylesheet">
+        <link href="static/css/datepicker3.css" rel="stylesheet">
+        <link href="static/css/beacon.css" rel="stylesheet"> 
+        <script src="static/js/jquery-1.11.1.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><span style="font-weight:bold;">Welcome to Beacon</span></a>
+                    <ul class="user-menu">
+                        <li class="dropdown pull-right">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>{{username}}<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+                                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+            <form role="search" action="{{ url_for('job_detail') }}" method="post">
+                <div class="form-group">
+                    <input class="form-control" id="ipt_quick_search" name="quick_search" placeholder="Quick Search">
+                </div>
+            </form>
+
+            <ul class="nav menu">
+                <li class="parent" id="nav_cnode">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-th"></span>Compute Node
+                        <span class="icon pull-right" data-toggle="collapse" href="#cnode_subitem">
+                            <em class="glyphicon glyphicon-s glyphicon-plus"></em>
+                        </span>
+                    </a>
+                    <ul class="children collapse" id="cnode_subitem">
+                        <li id="nav_overview"><a href="{{ url_for('lwfs_client') }}"><span class="glyphicon glyphicon-film"></span>Overview</a></li>
+                        <li id="nav_select_compute_node"><a href="{{ url_for('select_compute_node') }}"><span class="glyphicon glyphicon-asterisk"></span>Single Node Bandwidth</a></li>
+                        <li id="nav_iops"><a href="{{ url_for('c_iops') }}"><span class="glyphicon glyphicon-signal"></span>IOPS</a></li>
+                        <li id="nav_iobandwidth"><a href="{{ url_for('c_iobandwidth') }}"><span class="glyphicon glyphicon-stats"></span>IO Bandwidth</a></li>
+                        <li id="nav_metadata"><a href="{{ url_for('c_metadata') }}"><span class="glyphicon glyphicon-file"></span>Metadata</a></li>
+                        <li id="nav_datadistribution"><a href="{{ url_for('c_datadistribution') }}"><span class="glyphicon glyphicon-th-list"></span>Data Distribution</a></li>
+                        <li id="nav_activeprocess"><a href="{{ url_for('c_activeprocess') }}"><span class="glyphicon glyphicon-fire"></span>Active Process</a></li>
+                    </ul>
+                </li>
+                <li class="parent" id="nav_fnode">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-th-large"></span>Forwarding Node
+                        <span class="icon pull-right" data-toggle="collapse" href="#fnode_subitem" >
+                            <em class="glyphicon glyphicon-s glyphicon-plus"></em>
+                        </span>
+                    </a>
+                    <ul class="children collapse" id="fnode_subitem">
+                        <li><a class="" href="{{ url_for('lwfs_server') }}"> <span class="glyphicon glyphicon-share-alt"></span>IO Bandwidth</a></li>
+                    </ul>
+                </li>
+                <li class="parent" id="nav_snode">
+                    <a href="{{ url_for('storage_node') }}">
+                        <span class="glyphicon glyphicon-cloud"></span>Storage Node
+                    </a>
+                </li>
+                <li class="parent" id="nav_job_bandwidth"><a href="/job_bandwidth"> <span class="glyphicon glyphicon-align-center"> </span>Job Bandwidth</a></li>
+                <li class="parent" id="nav_system_workload"><a href="/workload"> <span class="glyphicon glyphicon-cog"> </span>System Workload</a></li>
+                <li class="parent" id="nav_userspace"><a href="/userspace"> <span class="glyphicon glyphicon-flag"> </span>User Space</a></li>
+                <li class="parent" id="nav_historyjob"><a href="/history_job"> <span class="glyphicon glyphicon-calendar"> </span>History Job</a></li>
+                <li class="parent" id="nav_system_user"><a href="/system_user"> <span class="glyphicon glyphicon-user"> </span>System User</a></li>
+            </ul>
+        </div>
+
+        {% block content %} {% endblock %}
+        {% block js %} {% endblock %}
+    </body>
+</html>

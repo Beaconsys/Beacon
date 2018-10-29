@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block content %}
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="{{ url_for('.index') }}"><span
+                    class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">OST Status</li>
+        </ol>
+    </div>
+    <!--/.row-->
+    <!-- Start the Form -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form id="form_ciobandwidth">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>OST List</label> <input class="form-control" name="ost_id" id="ost_id">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Please input the start time</label>
+                            <div class="form-group">
+                                <input class="form-control" name="start_time" id="start_time">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Please input the end time</label>
+                            <div class="form-group">
+                                <input class="form-control" name="end_time" id="end_time">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-md-4">
+                        <button class="btn btn-primary" id="submit">Query</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="canvas-wrapper col-lg-12">
+                        <img id="image", src="static/images/ost2.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/.main-->
+{% endblock %} {% block js %}
+<script type="text/javascript">
+    $("#nav_snode").addClass("active");
+</script>
+{% endblock %}
