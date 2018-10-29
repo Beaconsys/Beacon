@@ -81,7 +81,7 @@ In this directory, you can find many scripts to operate data on the compute node
 .. code:: python
 
         day_time = time.strptime(time_given, '%Y-%m-%d %H:%M:%S')
-        time_to_sec(day_time)
+        def time_to_sec(day_time)
         
 ☤ About LWFS_server directory
 ------------ 
