@@ -5,6 +5,9 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 ☤ About web interface directory
 ------------
 In this directory, we plan to open source our web code here, including the efficient cache strategy.
+
+☤ To to continued...
+------------
    
 Contact us:   
 
