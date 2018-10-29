@@ -27,7 +27,7 @@ First, we introduce job directory for you. You can see four file in this directo
         python job_ip.py time1 time2
         python job_ip.py JOBID
 - jobcount_coreutilize.py
-    (This script is used to calculate jobs' core-hour, which can also be used to calcute users' cost.
+    (This script is used to calculate jobs' core-hour, which can also be used to calcute users' cost)
 .. code:: python
         
         python jobcount_coreutilize.py time1 time2
@@ -47,5 +47,12 @@ First, we introduce job directory for you. You can see four file in this directo
 ☤ About MDS directory
 ------------ 
 
-  
- 
+There are 3 py files in this directory, including
+
+- lustre_MDS.py (This script is used to query metadat from elasticsearch database)
+.. code:: python
+       
+        python lustre_MDS.py time1 time2 -t
+-t represents save trace, more detail information you can use -n
+- query_MDS.py (This is a function, including query body)
+- draw.py (This script is used to visualize results)
