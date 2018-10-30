@@ -11,6 +11,7 @@ In this directory, we plan to open source our web code here, including the effic
 - app.py
     (Use this script to start the web interface)
 .. code:: python
+
         python app.py
 - auth
     (This directory is used to manage users)
