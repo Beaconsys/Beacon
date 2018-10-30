@@ -54,6 +54,8 @@ def validate_user(username, passwd, trynum = 6):
         return userdn # 3: User is not found  4: LDAP server error
 
 if __name__ == '__main__':
-    print validate_user('swstorage', 'nAGmH4rl')
+    USER_NAME = null
+    USER_passwd = null
+    print validate_user(USER_NAME, USER_passwd)
 
 
