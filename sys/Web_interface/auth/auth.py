@@ -3,7 +3,7 @@
 
 import time, ldap 
 
-LDAP_SERVER = 'ldap://10.0.2.1:389'
+LDAP_SERVER = null
 BASE_DN = 'dc = sz'
 
 def get_userdn(username):
