@@ -125,7 +125,7 @@ There are 4 files in this directory, including
 ☤ About lustre_client directory
 ------------ 
 
-☤ About LWFS_server directory
+☤ About lustre_server directory
 ------------ 
 
 ☤ About MDS directory
