@@ -93,13 +93,35 @@ In this directory, you can find many scripts to operate data on the compute node
         def time_to_sec(day_time)
         
 ☤ About LWFS_server directory
------------- 
+------------
 
-queue.csv row for time(seconds per row) column for queue value per nodeip
+There are 4 files in this directory, including
 
-read | write | Meta ||| wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
+- data_example.txt
+    (data example which is stored in ES)
+- create_csv.csv
+    (query from ES, store the analysised data into csv files)
+.. code:: python
+    
+        >> define start_time and end_time
+        python create_csv.csv
+        queue.csv row for time(seconds per row) column for queue value per nodeip
+        read | write | Meta ||| wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
+- forwarding_each_all.py
+    (Query body)
+.. code:: python
 
-
+        def search(time_s, time_e, host, index, host_t)
+        def search_le(time_std, host, index, host_t)
+        def search_gt(time_std, host, index, host_t)
+- deal_latency_queue.py
+    (query from ES and deal latency and queue length data)
+.. code:: python
+    
+        >> define start_time and end_time
+        python deal_latency_queue.py
+        
+        
 ☤ About lustre_client directory
 ------------ 
 
