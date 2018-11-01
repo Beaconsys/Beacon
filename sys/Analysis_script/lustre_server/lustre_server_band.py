@@ -8,6 +8,9 @@ import csv
 import sys
 from optparse import OptionParser
 
+host_online1 = null
+host_online2 = null
+
 parser = OptionParser()
 parser.add_option(
     "-d",
@@ -152,7 +155,7 @@ def query(bandr, bandw, host_t, index, daytime, time_std, time_s, time_e,
         print "start write CSV..."
         count = 0
         oscid = []
-        if host_t == 88:
+        if host_t == host_online1:
             csvfile = file("../Trace/lustre_client/gio/" + index + '.csv',
                            'wb')
         else:
@@ -221,9 +224,9 @@ if __name__ == "__main__":
         day_s = int(sys.argv[1].split('-')[2])
         day_e = int(sys.argv[3].split('-')[2])
         if sys.argv[5] == 'gio':
-            host_t = 88
+            host_t = host_online1
         else:
-            host_t = 90
+            host_t = host_online2
     for mon in range(month_s, month_e + 1):
         if mon < 10:
             m = "0" + str(mon)
