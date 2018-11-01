@@ -125,8 +125,40 @@ There are 4 files in this directory, including
 ☤ About lustre_client directory
 ------------ 
 
+There are 5 file in this directory, including
+
+- forwarding_each_all.py
+    (Query body)
+- lustre_client_band_cache.py
+    (This script is used to query lustre client data)
+.. code:: python
+        
+        python lustre_client_band_cache.py time1 time2 vbfs -t -b -c
+        vbfs means use reset forwarding nodes, -t represents save trace, -b means get bandwidth, -c means get cache information, more detail information you can use -n
+-  draw.py
+    (This script is used to visualize)
+- compute_band_gio.py
+    (This script is used to compute the default forwarding nodes' bandwidth)
+- compute_volume.py
+    (Compute the total volume)
+
 ☤ About lustre_server directory
 ------------ 
+
+There are 4 file in this directory, including
+
+- OST_each_all.py
+    (Query body)
+- lustre_server_band.py
+    (This script is used to query lustre server data)
+.. code:: python
+    
+        python lustre_server_band_cache.py time1 time2 vbfs -t -d
+        -t represents save trace, -d means draw pic, more detail information you can use -n
+- draw.py 
+    (This script is used to visualize)
+- compute_volume.py
+    (Compute the total volume)     
 
 ☤ About MDS directory
 ------------ 
