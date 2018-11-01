@@ -161,22 +161,3 @@ def set_search_optional_gt(time_start, time_end, host):
         }
     }
     return es_search_options
-
-
-if __name__ == '__main__':
-    time_s = '2018-07-25 08:00:00'
-    time_e = '2018-07-25 08:01:00'
-    host = []
-    for i in range(17, 144):
-        if i != 90:
-            host.append('20.0.2.' + str(i))
-    for i in range(1, 90):
-        host.append('20.0.208.' + str(i))
-    index = '2018.07.25'
-    host_t = 87
-    final_results = search(time_s, time_e, host, index, host_t)
-    print final_results[0]
-    print final_results[1]
-    print len(final_results[0])
-    for item in final_results[0]:
-        print item

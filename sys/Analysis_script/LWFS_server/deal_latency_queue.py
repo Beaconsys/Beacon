@@ -283,6 +283,6 @@ if __name__ == "__main__":
             queue.sort()
             print("Reshape and sort done...")
             print("deal latency...")
-            #deal_latency(result,daytime)
+            deal_latency(result, daytime)
             print("deal queue length...")
             deal_queue(queue, daytime)
