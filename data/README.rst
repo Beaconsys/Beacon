@@ -8,13 +8,24 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 
 This directory is used to store open source data. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually.
 
-Step to obtain the data:
+Data categories are:
 
-- We put open source data on cloud
-- We share the link here 
-- Anyone can obtian these data by access the `link here <https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ>`_ with fetchCode ``8pja``
-
-We are now peaparing data and will open source gradually.
+- ES_COMP
+    (Data collected by Beacon from compute nodes node by node)
+- ES_FWD1
+    (Data collected by Beacon from default forwarding nodes)
+- ES_FWD2
+    (Data collected by Beacon from rest forwarding nodes)
+- ES_MDS
+    (Data collected by Beacon from MDS)
+- ES_Latency
+    (Data collected by Beacon from forwarding nodes, on LWFS servers, including queue length and latency)
+- ES_OST1
+    (Data collected by Beacon from default storage nodes)
+- ES_OST2
+    (Data collected by Beacon from rest storage nodes)
+- ES_network
+    (Data collected by Beacon from IB switches)
 
 
 Contact us:
