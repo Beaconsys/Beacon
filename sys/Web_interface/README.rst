@@ -15,6 +15,7 @@ In this directory, we plan to open source our web code here, including the effic
         python app.py
 - auth
     (This module is used for User Authentication. In our environment, we implement our user authentication based on LDAP. You can custom your own user authentication via modifying the auth.py file)
+    
     - user.py
         (This module contains the implementation of the User class used for flask_login module)
     - auth.py
