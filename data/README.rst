@@ -12,7 +12,7 @@ Step to obtain the data:
 
 - We put open source data on cloud
 - We share the link here 
-- Anyone can obtian these data by access the `link here <https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ>`_ with fetchCode 8pja
+- Anyone can obtian these data by access the `link here <https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ>`_ with fetchCode ``8pja``
 
 We are now peaparing data and will open source gradually.
 
