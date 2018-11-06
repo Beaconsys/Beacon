@@ -41,6 +41,8 @@ Data categories are:
     (Data collected by Beacon from rest storage nodes)
   - ES_network
     (Data collected by Beacon from IB switches)
+    
+Data format will be update soon.  
 
 ☤ Thank You
 -----------
