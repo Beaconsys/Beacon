@@ -296,21 +296,21 @@ We are now peaparing data and will open source gradually.
 
 Data categories are:
 
-  - ES_COMP
+- ES_COMP
     (Data collected by Beacon from compute nodes node by node)
-  - ES_FWD1
+- ES_FWD1
     (Data collected by Beacon from default forwarding nodes)
-  - ES_FWD2
+- ES_FWD2
     (Data collected by Beacon from rest forwarding nodes)
-  - ES_MDS
+- ES_MDS
     (Data collected by Beacon from MDS)
-  - ES_Latency
+- ES_Latency
     (Data collected by Beacon from forwarding nodes, on LWFS servers, including queue length and latency)
-  - ES_OST1
+- ES_OST1
     (Data collected by Beacon from default storage nodes)
-  - ES_OST2
+- ES_OST2
     (Data collected by Beacon from rest storage nodes)
-  - ES_network
+- ES_network
     (Data collected by Beacon from IB switches)
     
 Data format will be update soon.  
