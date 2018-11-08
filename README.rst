@@ -192,6 +192,41 @@ There are 3 py files in this directory, including
 ------------
 In this directory, we will open source our code which is used to collect data on the Sunway TaihuLight supercomputer, includeing collecting data on compute nodes, forwarding nodes and storages. For more detail information, just read README in this directory.
 
+. About monitoring module directory
+------------
+
+In this directory, we plan to open source our code which is used to collect data on supercomputers, including monitoring on compute nodes, forwarding nodes, storage nodes and metadata nodes. We classify these scripts in to serveral categories as you can see some subdirectories in this directory.
+
+- get_lwfs_queue_lantency.py
+    (This script is used to collect I/O behavior on LWFS servers (on forwarding nodes))
+.. code:: python
+        
+        python get_lwfs_queue_latency.py
+- monitor_LWFS_client
+    (This directory including many c files which is used to collect data on compute nodes with an efficient compression method)
+.. code:: c
+    
+        make
+        ./a.out -t ES_host -p ES_port /io_behavior
+- monitor_lustre_client.py
+    (This script is used to collect I/O behavior on lustre clients, including RPC requests)
+.. code:: python
+
+        python monitor_lustre_client.py -g
+        # -g means collect data from default configuration, for more detail information use -n
+- monitor_lustre_server.py
+    (This script is used to collect I/O behavior on lustre servers, including OST status)
+.. code:: python
+
+        python monitor_lustre_server.py -g
+        # -g means collect data from default configuration, for more detail information use -n
+- monitor_lustre_MDS.py
+    (This script is used to collect I/O behavior on metadata nodes)
+.. code:: python
+
+        python monitor_lustr_MDS.py -g
+        # -g means collect data from default configuration, for more detail information use -n
+
 # Util
 ------------ 
 In this derictory, we will open source our other util code here.
@@ -199,6 +234,52 @@ In this derictory, we will open source our other util code here.
 # Web_interface
 ------------
 In this directory, we will open source our code which is used to show our users a websizte to make Beacon easy-to-use. For more detail inforamtion, just read README in this derectory
+
+. About web interface directory
+------------
+
+In this directory, we plan to open source our web code here, including the efficient cache strategy.
+
+- app.py
+    (This is the main program entry, to launch our Beacon monitoring application server, please run the following command:)
+.. code:: python
+
+        python app.py
+- auth
+    (This module is used for User Authentication. In our environment, we implement our user authentication based on LDAP. You can custom your own user authentication via modifying the auth.py file)
+    
+    - user.py
+        (This module contains the implementation of the User class used for flask_login module)
+    - auth.py
+        (You can modify the validate_user() function to custom your own user authentication)
+.. code:: python
+
+        def validate_user(username, passwd)    
+- static
+    (This directory contains the static files for Beacon web applications, including css files, js files, etc.)
+- util
+    (This module contains utility tools and methods, including database access, data caching, auxiliary tools, etc.)
+    
+    - db_util.py
+        (This module contains all the database access methods.)
+    - cache_cn.py
+        (This module is used for caching the webpage plot data in order to improve user querying experience.)
+    - lwfs_client.py
+        (This module querys monitoring data for the compute nodes. So far, this module can query and analyze read or write I/O bandwidth, IOPS and file open/close count data.)
+    - fwd.py
+        (This module querys monitoring data for the forwarding nodes. So far, this module only query analyze data for I/O bandwidth on forwarding nodes.)
+    - lustre_ost.py
+        (This module querys monitoring data for the OST bandwidth.)
+    - util.py
+        (This module contains the auxiliary methods used for other modules, some examples are as follows:)
+.. code:: python
+
+        def get_query_para(jobid, stime = '', etime = '')
+        def datetime_to_sec(xtime)
+        def get_host_ip_list()
+        def get_index(stime, etime)           
+- templates
+    (This directory contains the flask template HTML files.)
 
 ☤ data
 ------------
