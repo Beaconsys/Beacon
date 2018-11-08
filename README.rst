@@ -10,19 +10,19 @@ We are now cleaning up our codes and gradually open source Beacon code/Data coll
 
 Our code will be opened source in this directory, including monitoring module, analysis module and web interface. For more detailed information, just read README in sys directory.
 
- ☤ Analysis_script
+☤ Analysis_script
 ------------
 In this directory, we will open source our code which is used to analysis these mass data collected by Beacon. There are many subdirectory and you can find their introduction in README in this directory.
 
- ☤ Monitoring_module
+☤ Monitoring_module
 ------------
 In this directory, we will open source our code which is used to collect data on the Sunway TaihuLight supercomputer, includeing collecting data on compute nodes, forwarding nodes and storages. For more detail information, just read README in this directory.
 
- ☤ Util
+☤ Util
 ------------ 
 In this derictory, we will open source our other util code here.
 
- ☤ Web_interface
+☤ Web_interface
 ------------
 In this directory, we will open source our code which is used to show our users a websizte to make Beacon easy-to-use. For more detail inforamtion, just read README in this derectory
 
