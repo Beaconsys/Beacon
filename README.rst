@@ -295,8 +295,11 @@ Step to obtain the data:
 We are now peaparing data and will open source gradually.
 
 Data categories are:(Data format are shown below)
+
 index-name  ||  data-type  ||  id  ||  score  ||  message  ||  @version  ||  @timestamp  ||  host
+
 particularly ：message, timestamp, host
+
 - ES_COMP
     (Data collected by Beacon from compute nodes node by node)
 - ES_FWD1
