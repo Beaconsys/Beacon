@@ -320,6 +320,7 @@ particularly ：message, timestamp, host
 Data format will be update soon.  
 
 Still doing...
+Data are gradually put on the clound.
 
 ☤ Thank You
 -----------
