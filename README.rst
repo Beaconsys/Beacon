@@ -117,7 +117,7 @@ There are 4 files in this directory, including
         >> define start_time and end_time
         python create_csv.csv
         queue.csv row for time(seconds per row) column for queue value per nodeip
-        read | write | Meta ||| wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
+        read | write | Meta | wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
 - forwarding_each_all.py
     (Query body)
 .. code:: python
