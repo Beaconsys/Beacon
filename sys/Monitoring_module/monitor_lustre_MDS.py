@@ -32,6 +32,7 @@ parser.add_option(
     dest="need_help")
 (options, args) = parser.parse_args()
 
+time_sleep=1
 
 def collect_lustre_mds_gio(cluster_ip, port):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -57,7 +58,7 @@ def collect_lustre_mds_gio(cluster_ip, port):
                     s.send("\n")
                 count = count + 1
                 file.close()
-        time.sleep(1)
+        time.sleep(time_sleep)
     s.close()
 
 
@@ -85,7 +86,7 @@ def collect_lustre_mds_bio(cluster_ip, port):
                     s.send("\n")
                 count = count + 1
                 file.close()
-        time.sleep(1)
+        time.sleep(time_sleep)
     s.close()
 
 

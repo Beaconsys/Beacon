@@ -32,6 +32,7 @@ parser.add_option(
     dest="need_help")
 (options, args) = parser.parse_args()
 
+time_sleep=1
 
 def collect_lustre_client_bio(cluster_ip, port):
     #global cluster_ip,port
@@ -78,7 +79,7 @@ def collect_lustre_client_bio(cluster_ip, port):
                         s.send(message)
                         s.send("\n")
         first_time_flag = 0
-        time.sleep(2)
+        time.sleep(time_sleep)
     s.close()
 
 
@@ -129,7 +130,7 @@ def collect_lustre_client_gio(cluster_ip, port):
                         s.send(message)
                         s.send("\n")
         first_time_flag = 0
-        time.sleep(2)
+        time.sleep(time_sleep)
     s.close()
 
 

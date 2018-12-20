@@ -33,6 +33,7 @@ parser.add_option(
     dest="need_help")
 (options, args) = parser.parse_args()
 
+time_sleep=1
 
 def collect_lustre_server_gio(cluster_ip, port):
     dir_osc = '/proc/fs/lustre/osc/'
@@ -44,7 +45,7 @@ def collect_lustre_server_gio(cluster_ip, port):
     pre_cache = ''
     first_time_flag = 1
 
-    command = "ls /proc/fs/lustre/osc/ | wc -l"
+    command = "ls /proc/fs/lustre/osc/ | grep gsw | wc -l"
     f1 = os.popen(command)
     ost_sum = int(f1.readline())
     if ost_sum > 500:
@@ -122,7 +123,7 @@ def collect_lustre_server_gio(cluster_ip, port):
 #                        print cache_mes
             except Exception as e:
                 continue
-        time.sleep(2)
+        time.sleep(time_sleep)
     s.close()
 
 
@@ -136,7 +137,7 @@ def collect_lustre_server_bio(cluster_ip, port):
     pre_cache = ''
     first_time_flag = 1
 
-    command = "ls /proc/fs/lustre/osc/ | wc -l"
+    command = "ls /proc/fs/lustre/osc/ | grep bsw | wc -l"
     f1 = os.popen(command)
     ost_sum = int(f1.readline())
     if ost_sum > 500:
@@ -214,7 +215,7 @@ def collect_lustre_server_bio(cluster_ip, port):
 #                        print cache_mes
             except Exception as e:
                 continue
-        time.sleep(2)
+        time.sleep(time_sleep)
     s.close()
 
 if __name__ == "__main__":
