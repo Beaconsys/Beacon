@@ -8,8 +8,10 @@ We are now cleaning up our codes and gradually open source Beacon code/Data coll
 ☤ How to use
 ------------
 You can easily to establish Beacon to collect the useful message on other machines.
-- Select some nodes to install Beacon backend Database. (Logstash, Redis, Elasticsearch)
-- Configuration Example:
+
+- Select some nodes to install Beacon backend Database. 
+  (Logstash, Redis, Elasticsearch)
+- Configuration Example.
 
   // Collect messages from monitoring programs 
   input {
