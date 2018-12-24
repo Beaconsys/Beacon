@@ -10,7 +10,7 @@ We are now cleaning up our codes and gradually open source Beacon code/Data coll
 You can easily to establish Beacon to collect the useful message on other machines.
 - Select some nodes to install Beacon backend Database. (Logstash, Redis, Elasticsearch)
 - Configuration Example:
-  - Logstash: 
+- Logstash: 
   // Collect messages from monitoring programs 
   input {
            file {
@@ -62,7 +62,7 @@ You can easily to establish Beacon to collect the useful message on other machin
                 cluster=> "elasticsearch_cluster"
         }
   }
-  - Redis
+- Redis
   // Use Redis to cache messages
   pidfile /var/run/redis.pid
   port 6379
@@ -72,7 +72,7 @@ You can easily to establish Beacon to collect the useful message on other machin
   dbfilename dump.rdb
   dir /root/ELK/redis/db/
   ## vm-swap-file /tmp/redis.swap
-  - Elasticsearch
+- Elasticsearch
   You can nearly use the default configuration. However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
 
 ☤ sys
