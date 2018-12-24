@@ -5,6 +5,76 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
+☤ How to use
+------------
+You can easily to establish Beacon to collect the useful message on other machines.
+- Select some nodes to install Beacon backend Database. (Logstash, Redis, Elasticsearch)
+- Configuration Example:
+  - Logstash: 
+  // Collect messages from monitoring programs 
+  input {
+           file {
+                   type => "lala test"
+                   path => "/root/testfile"
+           }
+           file {
+                   type => "sys messages"
+                   path => "/var/log/messages"
+           }
+           tcp {
+                port => "9999"
+                codec => "plain"
+           }
+           stdin {
+           }
+  }
+#   output {
+#               stdout {
+#                       codec=>rubydebug
+#               }
+#   }
+  output {
+          redis {
+                  host => 'localhost'
+                  data_type => 'list'
+                  port => '6379'
+                  key => 'logstash:redis'
+          }
+  }
+  // Extract message from Redis and store it to the Elasticsearch
+  input {
+        redis {
+                host => 'localhost'
+                data_type => 'list'
+                port => "6379"
+                key => 'logstash:redis'
+                type => 'redis-input'
+        }
+}
+#output {
+#       stdout {
+#               codec=>rubydebug
+#       }
+#}
+output {
+        elasticsearch {
+                host=>localhost
+                cluster=> "elasticsearch_cluster"
+        }
+}
+  - Redis
+  // Use Redis to cache messages
+  pidfile /var/run/redis.pid
+  port 6379
+  timeout 0
+  loglevel verbose
+  logfile /var/log/redis.log
+  dbfilename dump.rdb
+  dir /root/ELK/redis/db/
+  ## vm-swap-file /tmp/redis.swap
+  - Elasticsearch
+  You can nearly use the default configuration. However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
+
 ☤ sys
 ------------
 
