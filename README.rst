@@ -28,11 +28,11 @@ You can easily to establish Beacon to collect the useful message on other machin
            stdin {
            }
   }
-#   output {
-#               stdout {
-#                       codec=>rubydebug
-#               }
-#   }
+  #   output {
+  #               stdout {
+  #                       codec=>rubydebug
+  #               }
+  #   }
   output {
           redis {
                   host => 'localhost'
@@ -50,18 +50,18 @@ You can easily to establish Beacon to collect the useful message on other machin
                 key => 'logstash:redis'
                 type => 'redis-input'
         }
-}
-#output {
-#       stdout {
-#               codec=>rubydebug
-#       }
-#}
-output {
+  }
+  #output {
+  #       stdout {
+  #               codec=>rubydebug
+  #       }
+  #}
+  output {
         elasticsearch {
                 host=>localhost
                 cluster=> "elasticsearch_cluster"
         }
-}
+  }
   - Redis
   // Use Redis to cache messages
   pidfile /var/run/redis.pid
