@@ -67,26 +67,19 @@ You can easily to establish Beacon to collect the useful message on other machin
   }
   
   // Use Redis to cache messages
-  
+.. code:: python  
+
   pidfile /var/run/redis.pid
-  
   port 6379
-  
   timeout 0
-  
-  loglevel verbose
-  
+  loglevel verbose 
   logfile /var/log/redis.log
-  
   dbfilename dump.rdb
-  
   dir /root/ELK/redis/db/
-  
   ## vm-swap-file /tmp/redis.swap
   
-  You can nearly use the default configuration. 
-  
-  However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
+You can nearly use the default configuration. 
+However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
 
 ☤ sys
 ------------
