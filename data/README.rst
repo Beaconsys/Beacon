@@ -21,12 +21,12 @@ We are now peaparing data and will open source gradually.
 Data categories are:(Data format are shown below)
 
 In order to open source the data, we perform a mapping strategy. e.g:
-.. code:: python
 
     Original:
     [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
+    
     After mapping:
-    [2018-09-10 14:16:52] T OPEN()   /User146/6596814368836924247/-1160749754054947605/-8481035609384531935/2230746621555036977/756880090362066628/-1752974055252976644 =>  0x1200bd3f0
+    [2018-09-10 14:16:52] T OPEN() /User146/6596814368836924247/-1160749754054947605/-8481035609384531935/2230746621555036977/756880090362066628/-1752974055252976644 =>  0x1200bd3f0
 
 Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
 
