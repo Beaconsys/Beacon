@@ -46,10 +46,8 @@ particularly ：message, timestamp, host
     (Data collected by Beacon from default storage nodes)
 - ES_OST2
     (Data collected by Beacon from rest storage nodes)
-- ES_network
-    (Data collected by Beacon from IB switches)
     
-Data format will be update soon.  
+We will continue to open source our data, including many fields.  
 
 Still doing...
 Data are gradually put on the clound.
