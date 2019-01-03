@@ -376,6 +376,16 @@ index-name  ||  data-type  ||  id  ||  score  ||  message  ||  @version  ||  @ti
 
 particularly ：message, timestamp, host
 
+In order to open source the data, we perform a mapping strategy. e.g:
+
+    Original:
+    [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
+    
+    After mapping:
+    [2018-09-10 14:16:52] T OPEN() /User146/6596814368836924247/-1160749754054947605/-8481035609384531935/2230746621555036977/756880090362066628/-1752974055252976644 =>  0x1200bd3f0
+
+Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
+
 - ES_COMP
     (Data collected by Beacon from compute nodes node by node)
 - ES_FWD1
@@ -390,13 +400,13 @@ particularly ：message, timestamp, host
     (Data collected by Beacon from default storage nodes)
 - ES_OST2
     (Data collected by Beacon from rest storage nodes)
-- ES_network
-    (Data collected by Beacon from IB switches)
     
-Data format will be update soon.  
+We will continue to open source our data, including many fields.  
 
 Still doing...
+
 Data are gradually put on the clound.
+
 
 ☤ Thank You
 -----------
