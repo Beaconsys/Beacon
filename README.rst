@@ -400,6 +400,9 @@ Every file or directory will be instead by a hash value. Every User will be inst
     (Data collected by Beacon from default storage nodes)
 - ES_OST2
     (Data collected by Beacon from rest storage nodes)
+- Job
+    (Data collected by Beacon from applications running on the TaihuLight) 
+    (PS: we are still applying for open sourece this part.)
     
 We will continue to open source our data, including many fields.  
 
