@@ -20,7 +20,7 @@ We are now peaparing data and will open source gradually.
 
 Data categories are:(Data format are shown below)
 
-In order to open source the data, we perform a mapping strategy. e.g:
+In order to open source the data, we perform **a mapping strategy**. e.g:
 
     Original:
     [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
@@ -30,7 +30,7 @@ In order to open source the data, we perform a mapping strategy. e.g:
 
 Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
 
-particularly ：message, timestamp, host
+particularly ：**message, timestamp, host**
 
 - ES_COMP
     (Data collected by Beacon from compute nodes node by node)
