@@ -6,14 +6,11 @@
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
    :width: 40%
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg
-   :width: 40%
-   
+   :width: 40%   
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg
-   :width: 40%
-   
+   :width: 40%   
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg
-   :width: 40%
-   
+   :width: 40%   
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
    :width: 40%
 
