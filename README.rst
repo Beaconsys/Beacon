@@ -3,15 +3,6 @@
 
 .. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/Beacon_icon.jpg
 
-.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/sdu.jpg
-
-.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/thu.jpg
-
-.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/qcri.jpg
-
-.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/emory.jpg
-
-.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/nscc.jpg
 
 
 
