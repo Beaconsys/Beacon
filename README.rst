@@ -8,14 +8,16 @@
         :target: https://pypi.python.org/pypi/jira/
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg  
-   :target: https://pypi.python.org/pypi/jira/
+        :target: https://pypi.python.org/pypi/jira/
    
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg
-   :width: 40%   
+        :target: https://pypi.python.org/pypi/jira/
+        
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg
-   :width: 40%   
+        :target: https://pypi.python.org/pypi/jira/ 
+        
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
-   :width: 40%
+        :target: https://pypi.python.org/pypi/jira/
 
 
 
