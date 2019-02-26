@@ -1,7 +1,9 @@
-☤ Beacon
+☤ Beacon [![Beacon](https://github.com/Beaconsys/Beacon/blob/master/Beacon_icon.png)]
 ------------
 
 Beacon is a monitoring tool for HPC centers, and has been deployed on the current No.3 Sunway TaihuLight Supercomputer for over a year. With the help of Beacon, various performance problems and system anomaly have been detected and relieved.
+
+The work is co-operated by Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University and National Supercomputing Center in Wuxi.
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
