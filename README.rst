@@ -1,9 +1,18 @@
 ☤ Beacon 
 ------------
 
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/Beacon_icon.jpg
-   :width: 100px
-   :height: 100px
+.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/Beacon_icon.jpg
+
+.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/sdu.jpg
+
+.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/thu.jpg
+
+.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/qcri.jpg
+
+.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/emory.jpg
+
+.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/nscc.jpg
+
 
 
 Beacon is a monitoring tool for HPC centers, and has been deployed on the current No.3 Sunway TaihuLight Supercomputer for over a year. With the help of Beacon, various performance problems and system anomaly have been detected and relieved.
