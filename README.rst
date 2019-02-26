@@ -1,7 +1,8 @@
 ☤ Beacon 
 ------------
 
-.. image:: https://github.com/Beaconsys/Beacon/tree/master/icon/Beacon_icon.jpg
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
+   :width: 40%
 
 
 
