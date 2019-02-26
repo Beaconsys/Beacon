@@ -2,7 +2,7 @@
 ------------
 
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/Beacon_icon.jpg
-   :width: 10%
+   :width: 100px
 
 
 Beacon is a monitoring tool for HPC centers, and has been deployed on the current No.3 Sunway TaihuLight Supercomputer for over a year. With the help of Beacon, various performance problems and system anomaly have been detected and relieved.
