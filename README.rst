@@ -26,6 +26,7 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 
 The work is co-operated by Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University and National Supercomputing Center in Wuxi.
 
+For modetails: Please refer to our NSDI19 paper End-to-end I/O Monitoring on a Leading Supercomputer.
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
 ☤ How to use
