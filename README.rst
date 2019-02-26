@@ -2,10 +2,10 @@
 ------------
 
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
-        :target: https://pypi.python.org/pypi/jira/ 
+        :target: https://github.com/Beaconsys/Beacon
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
-        :target: https://pypi.python.org/pypi/jira/
+        :target: http://www.sdu.edu.cn/
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg  
         :target: https://pypi.python.org/pypi/jira/
