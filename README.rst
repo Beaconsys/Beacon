@@ -3,11 +3,8 @@
 
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
    :width: 40%
-   
-
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
    :width: 40%
-   
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg
    :width: 40%
    
