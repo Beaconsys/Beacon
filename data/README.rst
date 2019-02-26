@@ -28,6 +28,15 @@ In order to open source the data, we perform **a mapping strategy**. e.g:
     After mapping:
     [2018-09-10 14:16:52] T OPEN() /User146/6596814368836924247/-1160749754054947605/-8481035609384531935/2230746621555036977/756880090362066628/-1752974055252976644 =>  0x1200bd3f0
 
+By the way, for **open opearation**: There may be two same open opearation in the trace. e.g:
+    
+    [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
+    
+    [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5
+    
+We can find that only one open operation has the file descriptor. The reason for this phenomenon is that one operation is the request initiator without file descriptor, and the other operation has alreadly received the request comletation signal with file descriptor.
+
+
 Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
 
 particularly ：**message, timestamp, host**
