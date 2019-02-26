@@ -5,19 +5,19 @@
         :target: https://github.com/Beaconsys/Beacon
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
-        :target: http://www.sdu.edu.cn/
+        :target: http://www.en.sdu.edu.cn/
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg  
-        :target: https://pypi.python.org/pypi/jira/
+        :target: http://www.tsinghua.edu.cn/publish/thu2018en/index.html
    
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg
-        :target: https://pypi.python.org/pypi/jira/
+        :target: https://www.qcri.org.qa/
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg
-        :target: https://pypi.python.org/pypi/jira/ 
+        :target: http://www.emory.edu/home/index.html
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
-        :target: https://pypi.python.org/pypi/jira/
+        :target: http://www.nsccwx.cn/wxcyw/
 
 
 
