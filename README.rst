@@ -1,8 +1,9 @@
 ☤ Beacon 
-------------
-
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
         :target: https://github.com/Beaconsys/Beacon
+------------
+
+
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
         :target: http://www.en.sdu.edu.cn/
