@@ -40,7 +40,8 @@ You can easily to establish Beacon to collect the useful message on other machin
 - Configuration Example.
 
   - Collect messages from monitoring programs
-.. code:: shell  
+.. code:: shell
+
   input {
            file {
                    type => "lala test"
