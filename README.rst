@@ -40,7 +40,7 @@ You can easily to establish Beacon to collect the useful message on other machin
 - Configuration Example.
 
   - Collect messages from monitoring programs
-.. code:: shell
+::
 
   input {
            file {
@@ -73,7 +73,7 @@ You can easily to establish Beacon to collect the useful message on other machin
    }
   
   - Extract message from Redis and store it to the Elasticsearch
-.. code:: shell
+::
 
   input {
         redis {
@@ -97,7 +97,7 @@ You can easily to establish Beacon to collect the useful message on other machin
    }
   
   - Use Redis to cache messages
-.. code:: python  
+::
 
   pidfile /var/run/redis.pid
   port 6379
