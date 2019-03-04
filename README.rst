@@ -56,11 +56,11 @@ You can easily to establish Beacon to collect the useful message on other machin
            stdin {
            }
   }
-  #   output {
-  #               stdout {
-  #                       codec=>rubydebug
-  #               }
-  #   }
+  output {
+            stdout {
+                    codec=>rubydebug
+            }
+  }
   output {
           redis {
                   host => 'localhost'
@@ -80,11 +80,11 @@ You can easily to establish Beacon to collect the useful message on other machin
                 type => 'redis-input'
         }
   }
-  #output {
-  #       stdout {
-  #               codec=>rubydebug
-  #       }
-  #}
+  output {
+        stdout {
+                 codec=>rubydebug
+         }
+  }
   output {
         elasticsearch {
                 host=>localhost
