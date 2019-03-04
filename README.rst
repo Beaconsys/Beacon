@@ -19,16 +19,13 @@
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
         :target: http://www.nsccwx.cn/wxcyw/
 
-
-
-
 Beacon is a monitoring tool for HPC centers, and has been deployed on the current No.3 Sunway TaihuLight Supercomputer for over a year. With the help of Beacon, various performance problems and system anomaly have been detected and relieved.
 
 The work is co-operated by Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University and National Supercomputing Center in Wuxi.
 
-
-For modetails: Please refer to our NSDI19 paper `End-to-end I/O Monitoring on a Leading Supercomputer <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ and FAST19 paper `Automatic, Application-Aware I/O Forwarding
+For more details: Please refer to our NSDI19 paper `End-to-end I/O Monitoring on a Leading Supercomputer <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ and FAST19 paper `Automatic, Application-Aware I/O Forwarding
 Resource Allocation <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
+
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
 ☤ How to use
