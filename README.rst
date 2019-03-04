@@ -2,7 +2,7 @@
 ------------
 
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
-        :target: https://github.com/Beaconsys/Beacon
+        :target: https://www.usenix.org/system/files/nsdi19-yang.pdf
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
         :target: http://www.en.sdu.edu.cn/
@@ -26,7 +26,7 @@ Beacon is a monitoring tool for HPC centers, and has been deployed on the curren
 
 The work is co-operated by Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University and National Supercomputing Center in Wuxi.
 
-For modetails: Please refer to our NSDI19 paper End-to-end I/O Monitoring on a Leading Supercomputer.
+For modetails: Please refer to our NSDI19 paper "End-to-end I/O Monitoring on a Leading Supercomputer" (Just click the Beacon logo).
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
 ☤ How to use
