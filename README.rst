@@ -55,12 +55,12 @@ You can easily to establish Beacon to collect the useful message on other machin
            }
            stdin {
            }
-  }
+   }
   output {
             stdout {
                     codec=>rubydebug
             }
-  }
+   }
   output {
           redis {
                   host => 'localhost'
@@ -68,7 +68,7 @@ You can easily to establish Beacon to collect the useful message on other machin
                   port => '6379'
                   key => 'logstash:redis'
           }
-  }
+   }
   
   // Extract message from Redis and store it to the Elasticsearch
   input {
@@ -79,18 +79,18 @@ You can easily to establish Beacon to collect the useful message on other machin
                 key => 'logstash:redis'
                 type => 'redis-input'
         }
-  }
+   }
   output {
         stdout {
                  codec=>rubydebug
          }
-  }
+   }
   output {
         elasticsearch {
                 host=>localhost
                 cluster=> "elasticsearch_cluster"
         }
-  }
+   }
   
   // Use Redis to cache messages
 .. code:: python  
