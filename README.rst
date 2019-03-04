@@ -39,10 +39,9 @@ You can easily to establish Beacon to collect the useful message on other machin
   (Logstash, Redis, Elasticsearch)
 - Configuration Example.
 
-  
+Collect messages from monitoring programs  
 ::
 
-  - Collect messages from monitoring programs
   input {
            file {
                    type => "lala test"
@@ -73,9 +72,9 @@ You can easily to establish Beacon to collect the useful message on other machin
           }
    }
   
-  
+Extract message from Redis and store it to the Elasticsearch  
 ::
-  - Extract message from Redis and store it to the Elasticsearch
+
   input {
         redis {
                 host => 'localhost'
@@ -97,10 +96,9 @@ You can easily to establish Beacon to collect the useful message on other machin
         }
    }
   
-  
+Use Redis to cache messages  
 ::
-
-  - Use Redis to cache messages
+ 
   pidfile /var/run/redis.pid
   port 6379
   timeout 0
