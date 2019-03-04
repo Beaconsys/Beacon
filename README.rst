@@ -73,6 +73,8 @@ You can easily to establish Beacon to collect the useful message on other machin
    }
   
   - Extract message from Redis and store it to the Elasticsearch
+.. code:: shell
+
   input {
         redis {
                 host => 'localhost'
