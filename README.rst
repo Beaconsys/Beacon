@@ -22,7 +22,6 @@
 
 Beacon is an end-to-end I/O resource monitoring and diagnosis system, for the 40960-node Sunway TaihuLight supercomputer, current ranked world No.3. Beacon simultaneously collects and correlates I/O tracing/profiling data from all the compute nodes, forwarding nodes, storage nodes and metadata servers. 
 With mechanisms such as aggressive online+offline trace compression and distributed caching/storage, it delivers scalable, low-overhead, and sustainable I/O diagnosis under production use. 
-Higher-level per-application I/O performance behaviors are reconstructed from system-level monitoring data to reveal correlations between system performance bottlenecks, utilization symptoms, and application behaviors.
 
 With its deployment on TaihuLight for around 18 months, it has successfully helped center administrators identify obscure design or configuration flaws, system anomaly occurrences, I/O performance interference, and resource under- or over-provisioning problems. Several of the exposed problems have already been fixed, with others being currently addressed. 
 In addition, Beacon can be adopted by other platforms. Beacon's building blocks, such as operation log collection and compression, scheduler-assisted per-application data correlation and analysis, history-based anomaly identification, automatic I/O mode detection, and built-in interference analysis, can all be performed on other supercomputers.
@@ -32,10 +31,9 @@ This is joint work among 5 institutes, Shandong University, Tsinghua University,
 ☤ Documents and publications
 ------------
 
-(i) NSDI19, `End-to-end I/O Monitoring on a Leading Supercomputer, Bin Yang, Xu Ji, Xiaosong Ma, Xiyang Wang, Tianyu Zhang, Xiupeng Zhu, Nosayba El-Sayed, Haidong Lan, Yibo Yang, Jidong Zhai, Weiguo Liu, and Wei Xue <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ 
-
+(I) NSDI19, `End-to-end I/O Monitoring on a Leading Supercomputer, Bin Yang, Xu Ji, Xiaosong Ma, Xiyang Wang, Tianyu Zhang, Xiupeng Zhu, Nosayba El-Sayed, Haidong Lan, Yibo Yang, Jidong Zhai, Weiguo Liu, and Wei Xue <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ 
 (#) FAST19, `Automatic, Application-Aware I/O Forwarding
-Resource Allocation,  <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
+Resource Allocation, Xu Ji, Bin Yang, Tianyu Zhang, Xiaosong Ma, Xiupeng Zhu, Xiyang Wang, Nosayba El-Sayed, Jidong Zhai, Weiguo Liu, and Wei Xue <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
