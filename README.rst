@@ -1,5 +1,5 @@
 ☤ Beacon 
-------------
+
 
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
         :target: https://www.usenix.org/system/files/nsdi19-yang.pdf
