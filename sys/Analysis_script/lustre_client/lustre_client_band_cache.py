@@ -8,6 +8,9 @@ import csv
 import sys
 from optparse import OptionParser
 
+host_online1 = null
+host_online2 = null
+
 parser = OptionParser()
 parser.add_option(
     "-d",
@@ -66,7 +69,7 @@ miss_list = [([0] * 86410) for i in range(130)]
 discard_list = [([0] * 86410) for i in range(130)]
 bandr = [([0] * 86410) for i in range(130)]
 bandw = [([0] * 86410) for i in range(130)]
-host_t = 87
+host_t = host_online1
 result_cache = []
 result_band = []
 t1 = datetime.datetime.strptime('2018-01-01 00:00:00', '%Y-%m-%d %H:%M:%S')
@@ -155,7 +158,7 @@ def deal_cache():
                 time_interval[1]) * 60 + int(time_interval[2])
             if host == host_p:
                 host_number = host.split('.')[3]
-                if host_t == 87:
+                if host_t == host_online1:
                     band_number = int(host_number) - 17
                 else:
                     band_number = int(host_number)
@@ -228,7 +231,7 @@ def deal_band():
                 if host == host_p and ost == ost_p:
                     host_number = host.split('.')[3]
                     #host_01=host.split('.')[2]
-                    if host_t == 87:
+                    if host_t == host_online1:
                         band_number = int(host_number) - 17
                     else:
                         band_number = int(host_number)
@@ -309,7 +312,7 @@ def deal_band():
                 if host == host_p and ost == ost_p:
                     host_number = host.split('.')[3]
                     #host_01=host.split('.')[2]
-                    if host_t == 87:
+                    if host_t == host_online1:
                         band_number = int(host_number) - 17
                     else:
                         band_number = int(host_number)
@@ -343,7 +346,7 @@ def deal_band():
 def save_trace():
     global banr, banw, hit_list, miss_list, discard_list, host_t, index
     print "start write CSV..."
-    if host_t == 87:
+    if host_t == host_online1:
         csvfile = file("../Trace/lustre_client/gio/" + index + '.csv', 'wb')
         jj = 17
     else:
@@ -373,7 +376,7 @@ def draw_pic():
     ax = plt.gca()
     count = 0
     oscid = []
-    if host_t == 87:
+    if host_t == host_online1:
         jj = 17
         fwd = 'gio'
     else:
@@ -431,9 +434,9 @@ if __name__ == "__main__":
         day_s = int(sys.argv[1].split('-')[2])
         day_e = int(sys.argv[3].split('-')[2])
         if sys.argv[5] == 'gio':
-            host_t = 87
+            host_t = host_line1
         else:
-            host_t = 89
+            host_t = host_online2
         for mon in range(month_s, month_e + 1):
             if mon < 10:
                 m = '0' + str(mon)

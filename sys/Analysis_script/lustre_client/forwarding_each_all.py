@@ -170,16 +170,5 @@ if __name__ == '__main__':
     time_s = '2017-10-10 08:00:00'
     time_e = '2017-12-20 08:00:00'
     host = []
-    for i in range(17, 144):
-        if i <> 90:
-            host.append('20.0.2.' + str(i))
-    for i in range(1, 90):
-        host.append('20.0.208.' + str(i))
-    index = '2017.11.17'
     host_t = 87
     final_results = search(time_s, time_e, host, index, host_t)
-    #print final_results[0]
-    #print final_results[1]
-    print len(final_results[0])
-    #for item in final_results[0]:
-    #    print item

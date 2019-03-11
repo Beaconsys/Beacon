@@ -9,10 +9,12 @@ import sys
 import elasticsearch1 as ES, random
 from scroll_query import scroll_search, get_search_result
 
+ES_host = ""  # "Database ip"
+
 
 def search(time_start, time_end, host, index, host_t):
     host_t = random.randint(10, 60)
-    host_all = '20.0.8.' + str(host_t)
+    host_all = ES_host + str(host_t)
     index_all = 'logstash-' + index
     es_search_options = set_search_optional(time_start, time_end, host)
     es_result = scroll_search(es_search_options, host_all, index_all)

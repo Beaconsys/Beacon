@@ -6,6 +6,7 @@ from matplotlib.pyplot import savefig
 import numpy as np
 import csv
 import os
+
 hostlist = []
 bandr = [([0] * 100000) for i in range(130)]
 bandw = [([0] * 100000) for i in range(130)]

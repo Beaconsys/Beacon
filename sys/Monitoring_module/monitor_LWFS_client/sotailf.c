@@ -2,6 +2,7 @@
  * Created: Tue Jan  9 15:49:21 1996 by faith@acm.org
  * Copyright 1996, 2003 Rickard E. Faith (faith@acm.org)
  * Copyright 2015 zhouqi (atmgnd@outlook.com)
+ * Copyright 2016 yangbin_sdu(yangbin_sdu@163.com)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
