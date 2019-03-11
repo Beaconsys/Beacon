@@ -20,9 +20,14 @@
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
         :target: http://www.nsccwx.cn/wxcyw/
 
-Beacon is a monitoring tool for HPC centers, and has been deployed on the current No.3 Sunway TaihuLight Supercomputer for over a year. With the help of Beacon, various performance problems and system anomaly have been detected and relieved.
+Beacon is an end-to-end I/O resource monitoring and diagnosis system, for the 40960-node Sunway TaihuLight supercomputer, current ranked world No.3. Beacon simultaneously collects and correlates I/O tracing/profiling data from all the compute nodes, forwarding nodes, storage nodes and metadata servers. 
+With mechanisms such as aggressive online+offline trace compression and distributed caching/storage, it delivers scalable, low-overhead, and sustainable I/O diagnosis under production use. 
+Higher-level per-application I/O performance behaviors are reconstructed from system-level monitoring data to reveal correlations between system performance bottlenecks, utilization symptoms, and application behaviors.
 
-The work is co-operated by Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University and National Supercomputing Center in Wuxi.
+With its deployment on TaihuLight for around 18 months, it has successfully helped center administrators identify obscure design or configuration flaws, system anomaly occurrences, I/O performance interference, and resource under- or over-provisioning problems. Several of the exposed problems have already been fixed, with others being currently addressed. 
+In addition, Beacon can be adopted by other platforms. Beacon's building blocks, such as operation log collection and compression, scheduler-assisted per-application data correlation and analysis, history-based anomaly identification, automatic I/O mode detection, and built-in interference analysis, can all be performed on other supercomputers.
+
+This is joint work among 5 institutes, Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University, and National Supercomputing Center in Wuxi.
 
 For more details: Please refer to our NSDI19 paper `End-to-end I/O Monitoring on a Leading Supercomputer <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ and FAST19 paper `Automatic, Application-Aware I/O Forwarding
 Resource Allocation <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
