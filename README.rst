@@ -29,13 +29,19 @@ In addition, Beacon can be adopted by other platforms. Beacon's building blocks,
 
 This is joint work among 5 institutes, Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University, and National Supercomputing Center in Wuxi.
 
-For more details: Please refer to our NSDI19 paper `End-to-end I/O Monitoring on a Leading Supercomputer <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ and FAST19 paper `Automatic, Application-Aware I/O Forwarding
-Resource Allocation <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
+☤ Documents and publications
+------------
+
+(i) NSDI19, `End-to-end I/O Monitoring on a Leading Supercomputer, Bin Yang, Xu Ji, Xiaosong Ma, Xiyang Wang, Tianyu Zhang, Xiupeng Zhu, Nosayba El-Sayed, Haidong Lan, Yibo Yang, Jidong Zhai, Weiguo Liu, and Wei Xue <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ 
+
+(#) FAST19, `Automatic, Application-Aware I/O Forwarding
+Resource Allocation,  <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
 ☤ How to use
 ------------
+
 You can easily to establish Beacon to collect the useful message on other machines.
 
 - Select some nodes to install Beacon backend Database. 
