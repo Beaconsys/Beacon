@@ -1,14 +1,31 @@
 ☤ Beacon 
 ------------
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
+        :target: https://www.usenix.org/system/files/nsdi19-yang.pdf
+------------        
 
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/Beacon_icon.jpg
-   :width: 100px
-   :height: 100px
 
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
+        :target: http://www.en.sdu.edu.cn/
+        
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg  
+        :target: http://www.tsinghua.edu.cn/publish/thu2018en/index.html
+   
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg
+        :target: https://www.qcri.org.qa/
+        
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg
+        :target: http://www.emory.edu/home/index.html
+        
+.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
+        :target: http://www.nsccwx.cn/wxcyw/
 
 Beacon is a monitoring tool for HPC centers, and has been deployed on the current No.3 Sunway TaihuLight Supercomputer for over a year. With the help of Beacon, various performance problems and system anomaly have been detected and relieved.
 
 The work is co-operated by Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University and National Supercomputing Center in Wuxi.
+
+For more details: Please refer to our NSDI19 paper `End-to-end I/O Monitoring on a Leading Supercomputer <https://www.usenix.org/system/files/nsdi19-yang.pdf>`_ and FAST19 paper `Automatic, Application-Aware I/O Forwarding
+Resource Allocation <https://www.usenix.org/system/files/fast19-ji.pdf>`_.
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
@@ -20,7 +37,9 @@ You can easily to establish Beacon to collect the useful message on other machin
   (Logstash, Redis, Elasticsearch)
 - Configuration Example.
 
-  // Collect messages from monitoring programs 
+Collect messages from monitoring programs  
+::
+
   input {
            file {
                    type => "lala test"
@@ -36,12 +55,12 @@ You can easily to establish Beacon to collect the useful message on other machin
            }
            stdin {
            }
-  }
-  #   output {
-  #               stdout {
-  #                       codec=>rubydebug
-  #               }
-  #   }
+   }
+  output {
+            stdout {
+                    codec=>rubydebug
+            }
+   }
   output {
           redis {
                   host => 'localhost'
@@ -49,9 +68,11 @@ You can easily to establish Beacon to collect the useful message on other machin
                   port => '6379'
                   key => 'logstash:redis'
           }
-  }
+   }
   
-  // Extract message from Redis and store it to the Elasticsearch
+Extract message from Redis and store it to the Elasticsearch  
+::
+
   input {
         redis {
                 host => 'localhost'
@@ -60,22 +81,22 @@ You can easily to establish Beacon to collect the useful message on other machin
                 key => 'logstash:redis'
                 type => 'redis-input'
         }
-  }
-  #output {
-  #       stdout {
-  #               codec=>rubydebug
-  #       }
-  #}
+   }
+  output {
+        stdout {
+                 codec=>rubydebug
+         }
+   }
   output {
         elasticsearch {
                 host=>localhost
                 cluster=> "elasticsearch_cluster"
         }
-  }
+   }
   
-  // Use Redis to cache messages
-.. code:: python  
-
+Use Redis to cache messages  
+::
+ 
   pidfile /var/run/redis.pid
   port 6379
   timeout 0
