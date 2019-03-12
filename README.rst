@@ -1,9 +1,6 @@
-☤ Beacon 
-------------
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
         :target: https://www.usenix.org/system/files/nsdi19-yang.pdf
 ----------        
-
 
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
         :target: http://www.en.sdu.edu.cn/
@@ -19,6 +16,9 @@
         
 .. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
         :target: http://www.nsccwx.cn/wxcyw/
+
+☤ Beacon 
+------------
 
 Beacon is an end-to-end I/O resource monitoring and diagnosis system, for the 40960-node Sunway TaihuLight supercomputer, current ranked world No.3. Beacon simultaneously collects and correlates I/O tracing/profiling data from all the compute nodes, forwarding nodes, storage nodes and metadata servers. With mechanisms such as aggressive online+offline trace compression and distributed caching/storage, it delivers scalable, low-overhead, and sustainable I/O diagnosis under production use. 
 
