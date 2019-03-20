@@ -1,6 +1,4 @@
-# Beacon 
-
-![Beacon icon](https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg)
+# Beacon ![Beacon icon](https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg)
 
 ![sdu icon](https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg) ![thu icon](https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg)  ![qcri icon](https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg) ![emory icon](https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg) ![nscc icon](https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg)
 
