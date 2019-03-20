@@ -10,21 +10,30 @@ With its deployment on TaihuLight for around 18 months, it has successfully help
 
 This is joint work among 5 institutes, Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University, and National Supercomputing Center in Wuxi.
 
-# Documents and publications
+# Documents and Publications
 
 1. NSDI19, End-to-end I/O Monitoring on a Leading Supercomputer, Bin Yang, Xu Ji, Xiaosong Ma, Xiyang Wang, Tianyu Zhang, Xiupeng Zhu, Nosayba El-Sayed, Haidong Lan, Yibo Yang, Jidong Zhai, Weiguo Liu, and Wei Xue, [PDF](https://www.usenix.org/system/files/nsdi19-yang.pdf)  
 2. FAST19, Automatic, Application-Aware I/O Forwarding Resource Allocation, Xu Ji, Bin Yang, Tianyu Zhang, Xiaosong Ma, Xiupeng Zhu, Xiyang Wang, Nosayba El-Sayed, Jidong Zhai, Weiguo Liu, and Wei Xue, [PDF](https://www.usenix.org/system/files/fast19-ji.pdf)
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
-☤ How to use
-------------
+# User Guide
+Beacon can be easily deployed on other clusters.  
 
-You can easily to establish Beacon to collect the useful message on other machines.
+## i. Runtime Environment
+1. Linux OS
+2. Python 2.7 or above
+3. C
+4. Elasticserach-1.5 or above
+5. Redis-3.0 or above
+6. Logstash-1.5 or above
 
-- Select some nodes to install Beacon backend Database. 
-  (Logstash, Redis, Elasticsearch)
-- Configuration Example.
+## ii. Deploy
+Prepare monitoring nodes (Beacon's client will collect data on these nodes), storage nodes (Beacon's server will storage all of data on these nodes), and visualization server (Optional, visualization server will support the web interface)
+1. Deploy monitoring daemons on monitoring nodes
+2. Deplot Elasticsearch + Redis + Logstash on storage nodes
+3. Deploy web server on visualization server
+
 
 Collect messages from monitoring programs  
 ::
