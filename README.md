@@ -17,7 +17,7 @@ This is joint work among 5 institutes, Shandong University, Tsinghua University,
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
 # User guide
-This help users to deploy Beacon on other clusters.  
+This part helps users to deploy Beacon on other clusters.  
 
 ## i. Runtime environment
 1. Linux OS
