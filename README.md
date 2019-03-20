@@ -10,17 +10,17 @@ With its deployment on TaihuLight for around 18 months, it has successfully help
 
 This is joint work among 5 institutes, Shandong University, Tsinghua University, Qatar Computing Research institute, Emory University, and National Supercomputing Center in Wuxi.
 
-# Documents and Publications
+# Documents and publications
 
 1. NSDI19, End-to-end I/O Monitoring on a Leading Supercomputer, Bin Yang, Xu Ji, Xiaosong Ma, Xiyang Wang, Tianyu Zhang, Xiupeng Zhu, Nosayba El-Sayed, Haidong Lan, Yibo Yang, Jidong Zhai, Weiguo Liu, and Wei Xue, [PDF](https://www.usenix.org/system/files/nsdi19-yang.pdf)  
 2. FAST19, Automatic, Application-Aware I/O Forwarding Resource Allocation, Xu Ji, Bin Yang, Tianyu Zhang, Xiaosong Ma, Xiupeng Zhu, Xiyang Wang, Nosayba El-Sayed, Jidong Zhai, Weiguo Liu, and Wei Xue, [PDF](https://www.usenix.org/system/files/fast19-ji.pdf)
 
 We are now cleaning up our codes and gradually open source Beacon code/Data collected on Sunway TaihuLight, including monitoring and analysis methods.
 
-# User Guide
+# User guide
 Beacon can be easily deployed on other clusters.  
 
-## i. Runtime Environment
+## i. Runtime environment
 1. Linux OS
 2. Python 2.7 or above
 3. C
@@ -185,15 +185,13 @@ There are 4 files in this directory, including
 * data_example.txt
     (data example which is stored in ES)
 * create_csv.csv
-    (query from ES, store the analysised data into csv files)  
-  > define start_time and end_time
-    
+    (query from ES, store the analysised data into csv files)      
   > python create_csv.csv
-  
-  > queue.csv row for time(seconds per row) column for queue value per nodeip
-  
-  > read | write | Meta | wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
-  
+```  
+  # define start_time and end_time
+  # queue.csv row for time(seconds per row) column for queue value per nodeip
+  # read | write | Meta | wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
+```  
 * forwarding_each_all.py
     (Query body)
 ```
@@ -203,19 +201,16 @@ There are 4 files in this directory, including
 ```
 * deal_latency_queue.py
     (query from ES and deal latency and queue length data)
-  > define start_time and end_time
-  
-  > python deal_latency_queue.py       
+  > python deal_latency_queue.py `# define start_time and end_time`       
         
-### 1.5 lustre_client directory
+### 1.5 Lustre_client directory
 There are 5 file in this directory, including
 
 * forwarding_each_all.py
     (Query body)
 * lustre_client_band_cache.py
     (This script is used to query lustre client data)       
-  > python lustre_client_band_cache.py time1 time2 vbfs -t -b -c
-  `vbfs means use reset forwarding nodes, -t represents save trace, -b means get bandwidth, -c means get cache information, more detail information you can use -n`
+  > python lustre_client_band_cache.py time1 time2 vbfs -t -b -c `# vbfs means use reset forwarding nodes, -t represents save trace, -b means get bandwidth, -c means get cache information, more detail information you can use -n`
 * draw.py
     (This script is used to visualize)
 * compute_band_gio.py
@@ -223,107 +218,77 @@ There are 5 file in this directory, including
 * compute_volume.py
     (Compute the total volume)
 
-### 1.6 lustre_server directory
+### 1.6 Lustre_server directory
 There are 4 file in this directory, including
 
 * OST_each_all.py
     (Query body)
 * lustre_server_band.py
     (This script is used to query lustre server data)
-.. code:: python
-    
-        python lustre_server_band_cache.py time1 time2 vbfs -t -d
-        -t represents save trace, -d means draw pic, more detail information you can use -n
+  > python lustre_server_band_cache.py time1 time2 vbfs -t -d `# -t represents save trace, -d means draw pic, more detail information you can use -n`
 * draw.py 
     (This script is used to visualize)
 * compute_volume.py
     (Compute the total volume)     
 
-### 1.7 About MDS directory
+### 1.7 MDS directory
 There are 3 py files in this directory, including
 
 * lustre_MDS.py
     (This script is used to query metadat from elasticsearch database)
-.. code:: python
-       
-        python lustre_MDS.py time1 time2 -t
-        #-t represents save trace, more detail information you can use -n
+  > python lustre_MDS.py time1 time2 -t `#-t represents save trace, more detail information you can use -n`
 * query_MDS.py
     (A function, including query body)
 * draw.py
    (This script is used to visualize results)
 
-
-# Monitoring_module
-------------
+## 2 Monitoring_module
 In this directory, we will open source our code which is used to collect data on the Sunway TaihuLight supercomputer, includeing collecting data on compute nodes, forwarding nodes and storages. For more detail information, just read README in this directory.
 
-. About monitoring module directory
-------------
-
+### 2.1 Monitoring module directory
 In this directory, we plan to open source our code which is used to collect data on supercomputers, including monitoring on compute nodes, forwarding nodes, storage nodes and metadata nodes. We classify these scripts in to serveral categories as you can see some subdirectories in this directory.
 
-- get_lwfs_queue_lantency.py
+* get_lwfs_queue_lantency.py
     (This script is used to collect I/O behavior on LWFS servers (on forwarding nodes))
-.. code:: python
-        
-        python get_lwfs_queue_latency.py
-- monitor_LWFS_client
+  > python get_lwfs_queue_latency.py
+* monitor_LWFS_client
     (This directory including many c files which is used to collect data on compute nodes with an efficient compression method)
-.. code:: c
-    
-        make
-        ./a.out -t ES_host -p ES_port /io_behavior
-- monitor_lustre_client.py
+  > make
+  
+  > ./a.out -t ES_host -p ES_port /io_behavior
+* monitor_lustre_client.py
     (This script is used to collect I/O behavior on lustre clients, including RPC requests)
-.. code:: python
-
-        python monitor_lustre_client.py -g
-        # -g means collect data from default configuration, for more detail information use -n
-- monitor_lustre_server.py
+  > python monitor_lustre_client.py -g `# -g means collect data from default configuration, for more detail information use -n`
+* monitor_lustre_server.py
     (This script is used to collect I/O behavior on lustre servers, including OST status)
-.. code:: python
-
-        python monitor_lustre_server.py -g
-        # -g means collect data from default configuration, for more detail information use -n
-- monitor_lustre_MDS.py
+  > python monitor_lustre_server.py -g `# -g means collect data from default configuration, for more detail information use -n`
+* monitor_lustre_MDS.py
     (This script is used to collect I/O behavior on metadata nodes)
-.. code:: python
+  > python monitor_lustr_MDS.py -g `# -g means collect data from default configuration, for more detail information use -n`
 
-        python monitor_lustr_MDS.py -g
-        # -g means collect data from default configuration, for more detail information use -n
-
-# Util
------------- 
+## 3 Util
 In this derictory, we will open source our other util code here.
 
-# Web_interface
-------------
+## 4 Web_interface
 In this directory, we will open source our code which is used to show our users a websizte to make Beacon easy-to-use. For more detail inforamtion, just read README in this derectory
 
-. About web interface directory
-------------
-
+### 4.1 About web interface directory
 In this directory, we plan to open source our web code here, including the efficient cache strategy.
-
-- app.py
+* app.py
     (This is the main program entry, to launch our Beacon monitoring application server, please run the following command:)
-.. code:: python
-
-        python app.py
-- auth
-    (This module is used for User Authentication. In our environment, we implement our user authentication based on LDAP. You can custom your own user authentication via modifying the auth.py file)
-    
-    - user.py
+  > python app.py
+* auth
+    (This module is used for User Authentication. In our environment, we implement our user authentication based on LDAP. You can custom your own user authentication via modifying the auth.py file)    
+    * user.py
         (This module contains the implementation of the User class used for flask_login module)
-    - auth.py
+    * auth.py
         (You can modify the validate_user() function to custom your own user authentication)
-.. code:: python
-
-        def validate_user(username, passwd)    
-- static
+        ```
+        def validate_user(username, passwd)
+        ```
+* static
     (This directory contains the static files for Beacon web applications, including css files, js files, etc.)
-- util
+* util
     (This module contains utility tools and methods, including database access, data caching, auxiliary tools, etc.)
     
     - db_util.py
@@ -347,9 +312,7 @@ In this directory, we plan to open source our web code here, including the effic
 - templates
     (This directory contains the flask template HTML files.)
 
-☤ data
-------------
-
+# Itroduction of data
 This directory is used to store open source data. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually.
 
 Step to obtain the data:
