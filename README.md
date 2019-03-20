@@ -30,13 +30,14 @@ This part helps users to deploy Beacon on other clusters.
 ## ii. Deployment
 Prepare monitoring nodes (Beacon's client will collect data on these nodes), storage nodes (Beacon's server will store data on these nodes), and  a dedicated visualization node (Beacon's web server will run on this node)
 1. Deploy monitoring daemons on monitoring nodes
-2. Deplot Elasticsearch + Redis + Logstash on storage nodes
+2. Deploy Elasticsearch + Redis + Logstash on storage nodes
 3. Deploy web server on the dedicated visualization node
 
 ## iii. Configuration
+Before run Beacon's client (monitoring daemons) on monitoring nodes, we should configure Beacon's storage server first.
 Below will show how to configure Beacon's sotrage server after we install Elasticsearch, redis, logstash successfully. 
 
-Collect messages from monitoring programs  
+* Use logstash to collect messages from monitoring daemonss  
 ```
   input {
            file {
@@ -69,7 +70,7 @@ Collect messages from monitoring programs
    }
 ```
 
-Extract message from Redis and store it to the Elasticsearch  
+* Use logstash to extract message from Redis and store it to the Elasticsearch  
 ```
   input {
         redis {
@@ -92,8 +93,7 @@ Extract message from Redis and store it to the Elasticsearch
         }
    }
 ```
-
-Use Redis to cache messages  
+* Use Redis to cache messages  
 ``` 
   pidfile /var/run/redis.pid
   port 6379
@@ -103,6 +103,11 @@ Use Redis to cache messages
   dbfilename dump.rdb
   dir /root/ELK/redis/db/
   ## vm-swap-file /tmp/redis.swap
+```
+* Use Elasticsearch to store data
+```
+ cluster.name: elasticsearchzhengji
+ # default configuration
 ```
 
 We can nearly use the default configuration. 
