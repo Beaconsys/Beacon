@@ -47,8 +47,7 @@ We can find that only one open operation has the file descriptor. The reason for
 * ES_OST2
     (Data collected by Beacon from rest storage nodes)
 * Job
-    (Data collected by Beacon from applications running on the TaihuLight) 
-    (PS: we are still applying for open sourece this part.)
+    (Data collected by Beacon from applications running on the TaihuLight `# PS: we are still applying for open sourece this part.`)
     
 Detailed data format: ![Figure](https://github.com/Beaconsys/Beacon/blob/master/icon/Dataformat.png)
 
