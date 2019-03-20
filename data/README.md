@@ -1,5 +1,3 @@
-# Itroduction of released data
-
 ## Introduction of released dataset
 
 Original data format are shown below:
