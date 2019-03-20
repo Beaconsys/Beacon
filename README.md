@@ -107,43 +107,30 @@ Use Redis to cache messages
 You can nearly use the default configuration. 
 However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
 
-☤ sys
-------------
+# Introduction of sys code
 
-Our code will be opened source in this directory, including monitoring module, analysis module and web interface. For more detailed information, just read README in sys directory.
+Our code will be opened source in /sys, including monitoring module, analysis module and web interface. For more detailed information, just read README in sys directory.
 
-# Analysis_script
-------------
+## 1 Analysis_script
 In this directory, we will open source our code which is used to analysis these mass data collected by Beacon. There are many subdirectory and you can find their introduction in README in this directory.
 
-. About Analysis_script directory
-------------
-
+### 1.1 Analysis_script directory
 These scripts are all our scripts to deal with mass data collected by Beacon, including scripts query ES(LWFS, lustre), mysql(job database). We classify these scripts in to serveral categories as you can see some subdirectories in this directory.
 
-. About Job directory
-------------
-
+### 1.2 About Job directory
 First, we introduce job directory for you. You can see four file in this directory.
- 
-- COMPID_CabinetID 
+* COMPID_CabinetID 
     (A original statistic mapping table between compute node and forwarding node)
-- job_cabid.py 
-    (Use this script, you can get the cabinets that are used by the given job)    
-.. code:: python
-        
-        python job_cabid.py JOBID
-- job_ip.py
-    (This script has many functions, you can obtain jobs' summary running status through this script)
-.. code:: python
-    
-        python job_ip.py time1 time2
-        python job_ip.py JOBID
-- jobcount_coreutilize.py
+* job_cabid.py 
+    (Use this script, you can get the cabinets that are used by the given job)            
+   > python job_cabid.py JOBID
+* job_ip.py
+    (This script has many functions, you can obtain jobs' summary running status through this script)    
+   > python job_ip.py time1 time2
+   > python job_ip.py JOBID
+* jobcount_coreutilize.py
     (This script is used to calculate jobs' core-hour, which can also be used to calcute users' cost)
-.. code:: python
-        
-        python jobcount_coreutilize.py time1 time2
+   > python jobcount_coreutilize.py time1 time2
  
 . About LWFS_client directory
 ------------ 
