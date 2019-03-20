@@ -142,28 +142,29 @@ In this directory, you can find many scripts to operate data on the compute node
 * deal gnenrator.py
     (This script includes many function, is used to deal various messages)
 ````
-        def fwd_deal_message(ost_message, ost_time, start_time, end_time)
-        def ost_deal_message(ost_message, ost_time, start_time, end_time)
-        def deal_part_message(resultr, resultw, result_open, result_close, \
-               resltr_ops,resultw_ops, resultr_size, resultw_size, dictr, dictw, \
-               results_message, file_open, file_all_set, \
-               results_host, min_time, max_time)
-        def deal_all_message(results_message, results_host, min_time, max_time)
-        def deal_single_message_fd(results_message)
-        def deal_single_message(results_message)
+    def fwd_deal_message(ost_message, ost_time, start_time, end_time)
+    def ost_deal_message(ost_message, ost_time, start_time, end_time)
+    def deal_part_message(resultr, resultw, result_open, result_close,
+           resltr_ops,resultw_ops, resultr_size, resultw_size, dictr, dictw,
+           results_message, file_open, file_all_set,
+           results_host, min_time, max_time)
+    def deal_all_message(results_message, results_host, min_time, max_time)
+    def deal_single_message_fd(results_message)
+    def deal_single_message(results_message)
 ````
 * es_search.py 
     (A function, including query body)
-        `def search(time_start, time_end, host, index, host_t)`
+    `def search(time_start, time_end, host, index, host_t)`
 * es_search_fwd.py
     (Query body)
-        `def search_interval(time_s, time_e, fwd, host, index, host_t)`
+    `def search_interval(time_s, time_e, fwd, host, index, host_t)`
 * es_search_ost.py
     (Query body)
-        `def search_interval(time_s, time_e, host, index, host_t)`
+    `def search_interval(time_s, time_e, host, index, host_t)`
 * job_ip_all.py
     (This script has many functions, you can obtain jobs' summary running status through this script)
   > python job_ip.py time1 time2
+  
   > python job_ip.py JOBID
 * savejob_jobid_modified.py
     (A function, used to save job's data which has been queried and dealed) 
@@ -174,86 +175,82 @@ In this directory, you can find many scripts to operate data on the compute node
   > python showjob_by_jobid.py JOBID
 * time_to_sec.py
     (A function is used to time transformation)
-  > day_time = time.strptime(time_given, '%Y-%m-%d %H:%M:%S')
-  > def time_to_sec(day_time)
-        
+```
+    day_time = time.strptime(time_given, '%Y-%m-%d %H:%M:%S')
+    def time_to_sec(day_time)
+```        
 ### 1.4 LWFS_server directory
 There are 4 files in this directory, including
 
 * data_example.txt
     (data example which is stored in ES)
 * create_csv.csv
-    (query from ES, store the analysised data into csv files)
-```    
-        >> define start_time and end_time
-        python create_csv.csv
-        queue.csv row for time(seconds per row) column for queue value per nodeip
-        read | write | Meta | wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
-```
+    (query from ES, store the analysised data into csv files)  
+  > define start_time and end_time
+    
+  > python create_csv.csv
+  
+  > queue.csv row for time(seconds per row) column for queue value per nodeip
+  
+  > read | write | Meta | wait | exe.csv column is 128 group * 9 columns 9 = nodeip + 8 datas row for time(seconds per row)
+  
 * forwarding_each_all.py
     (Query body)
 ```
-        def search(time_s, time_e, host, index, host_t)
-        def search_le(time_std, host, index, host_t)
-        def search_gt(time_std, host, index, host_t)
+    def search(time_s, time_e, host, index, host_t)
+    def search_le(time_std, host, index, host_t)
+    def search_gt(time_std, host, index, host_t)
 ```
 * deal_latency_queue.py
     (query from ES and deal latency and queue length data)
-``` 
-        >> define start_time and end_time
-        python deal_latency_queue.py
-```        
+  > define start_time and end_time
+  
+  > python deal_latency_queue.py       
         
 ### 1.5 lustre_client directory
 There are 5 file in this directory, including
 
-- forwarding_each_all.py
+* forwarding_each_all.py
     (Query body)
-- lustre_client_band_cache.py
-    (This script is used to query lustre client data)
-.. code:: python
-        
-        python lustre_client_band_cache.py time1 time2 vbfs -t -b -c
-        vbfs means use reset forwarding nodes, -t represents save trace, -b means get bandwidth, -c means get cache information, more detail information you can use -n
--  draw.py
+* lustre_client_band_cache.py
+    (This script is used to query lustre client data)       
+  > python lustre_client_band_cache.py time1 time2 vbfs -t -b -c
+  `vbfs means use reset forwarding nodes, -t represents save trace, -b means get bandwidth, -c means get cache information, more detail information you can use -n`
+* draw.py
     (This script is used to visualize)
-- compute_band_gio.py
+* compute_band_gio.py
     (This script is used to compute the default forwarding nodes' bandwidth)
-- compute_volume.py
+* compute_volume.py
     (Compute the total volume)
 
-. About lustre_server directory
------------- 
-
+### 1.6 lustre_server directory
 There are 4 file in this directory, including
 
-- OST_each_all.py
+* OST_each_all.py
     (Query body)
-- lustre_server_band.py
+* lustre_server_band.py
     (This script is used to query lustre server data)
 .. code:: python
     
         python lustre_server_band_cache.py time1 time2 vbfs -t -d
         -t represents save trace, -d means draw pic, more detail information you can use -n
-- draw.py 
+* draw.py 
     (This script is used to visualize)
-- compute_volume.py
+* compute_volume.py
     (Compute the total volume)     
 
-. About MDS directory
------------- 
-
+### 1.7 About MDS directory
 There are 3 py files in this directory, including
 
-- lustre_MDS.py
+* lustre_MDS.py
     (This script is used to query metadat from elasticsearch database)
 .. code:: python
        
         python lustre_MDS.py time1 time2 -t
         #-t represents save trace, more detail information you can use -n
-- query_MDS.py
+* query_MDS.py
     (A function, including query body)
-- draw.py
+* draw.py
    (This script is used to visualize results)
 
 
