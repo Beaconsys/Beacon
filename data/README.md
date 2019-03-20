@@ -1,10 +1,9 @@
 # Itroduction of data
 
-Data categories are:(Data format are shown below)
-
+Data format are shown below:
 `index-name  ||  data-type  ||  id  ||  score  ||  message  ||  @version  ||  @timestamp  ||  host`
 
-particularly ：message, timestamp, host
+Particularly:`message || timestamp || host`
 
 In order to open source the data, we perform a mapping strategy. e.g:
 ```
@@ -24,6 +23,7 @@ We can find that only one open operation has the file descriptor. The reason for
 
 Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
 
+## Data categories
 * ES_COMP
     (Data collected by Beacon from compute nodes node by node)
 * ES_FWD1
@@ -42,6 +42,8 @@ Every file or directory will be instead by a hash value. Every User will be inst
     (Data collected by Beacon from applications running on the TaihuLight) 
     (PS: we are still applying for open sourece this part.)
     
+Detail data format can be decrised in this ~[Figure](https://github.com/Beaconsys/Beacon/blob/master/icon/Dataformat.png)
+
 We will continue to open source our data, including many fields.  
 
 Still doing...
