@@ -113,16 +113,16 @@ However, remember to set the same cluster name and ensure these backend nodes ar
 Our code will be opened source in /sys, including monitoring module, analysis module and web interface. For more detailed information, please read [README](https://github.com/Beaconsys/Beacon/blob/master/sys/README.md) in sys directory.
 
 
-# Introduction of data
-This directory is used to store open source data. Because data collected by Beacon is mass and we had to put it here, we plan to open source data gradually.
+# Introduction of released data
+The directory /data is used to store released data, and we plan to release data gradually.
 
 Step to obtain the data:
 
-* We put open source data on cloud
+* We put released data on cloud
 * We share the link here 
 * Anyone can obtian these data by access the [link here](https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ) with fetchCode `8pja`
   
-The released dataset is a sample-14 day (start from 2018-01-01, the total data size is about 50GB compressed) multi-level I/O monitoring dataset from the [TaihuLight Supercomputer](http://performance.netlib.org/utk/people/JackDongarra/PAPERS/sunway-taihulight.pdf), currently the world's 3rd largest.
+The released dataset is a sample 14-day (start from 2018-01-01, the total data size is about 50GB compressed) multi-level I/O monitoring dataset from the [TaihuLight Supercomputer](http://performance.netlib.org/utk/people/JackDongarra/PAPERS/sunway-taihulight.pdf), currently the world's 3rd largest.
 For more detailed information, please read [README](https://github.com/Beaconsys/Beacon/blob/master/data/README.md) in data directory.
 
 # Thank You
