@@ -109,7 +109,7 @@ However, remember to set the same cluster name and ensure these backend nodes ar
 
 # Introduction of sys code
 
-Our code will be opened source in /sys, including monitoring module, analysis module and web interface. For more detailed information, just read [README](https://github.com/Beaconsys/Beacon/blob/master/sys/README.md) in sys directory.
+Our code will be opened source in /sys, including monitoring module, analysis module and web interface. For more detailed information, please read [README](https://github.com/Beaconsys/Beacon/blob/master/sys/README.md) in sys directory.
 
 
 # Itroduction of data
@@ -122,7 +122,7 @@ Step to obtain the data:
 * Anyone can obtian these data by access the [link here](https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ) with fetchCode `8pja`
   
 The released dataset is a sample-14 day (start from 2018-01-01) multi-level I/O monitoring dataset from the [TaihuLight Supercomputer](http://performance.netlib.org/utk/people/JackDongarra/PAPERS/sunway-taihulight.pdf), currently the world's 3rd largest.
-For more detailed information, just read [README](https://github.com/Beaconsys/Beacon/blob/master/data/README.md) in data directory.
+For more detailed information, please read [README](https://github.com/Beaconsys/Beacon/blob/master/data/README.md) in data directory.
 
 # Thank You
 Thanks for checking this library out! I hope you find it useful.
