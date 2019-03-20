@@ -137,8 +137,7 @@ In this directory, you can find many scripts to operate data on the compute node
 
 * abnormal_node_detect.py 
    (This script is used to detect abnormal nodes by the given jobid) 
-  > python abnormal_node_detect.py JOBID
-  > # use jobid list, this script can detect anomaly automatically 
+  > python abnormal_node_detect.py JOBID `# use jobid list, this script can detect anomaly automatically`
 * deal gnenrator.py
     (This script includes many function, is used to deal various messages)
 ````
