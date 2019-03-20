@@ -52,6 +52,4 @@ We can find that only one open operation has the file descriptor. The reason for
     
 Detailed data format: ![Figure](https://github.com/Beaconsys/Beacon/blob/master/icon/Dataformat.png)
 
-We will continue to open source our data, including many fields.  
-
-Data are gradually put on the clound.
+More data will be released, if you are interested, please follow us.
