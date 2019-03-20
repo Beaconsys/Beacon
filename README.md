@@ -37,7 +37,7 @@ Prepare monitoring nodes (Beacon's client will collect data on these nodes), sto
 Before run Beacon's client (monitoring daemons) on monitoring nodes, we should configure Beacon's storage server first.
 Below will show how to configure Beacon's sotrage server after we install Elasticsearch, redis, logstash successfully. 
 
-* Use logstash to collect messages from monitoring daemonss  
+* Use logstash to collect messages from monitoring daemons
 ```
   input {
            file {
