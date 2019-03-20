@@ -123,7 +123,7 @@ First, we introduce job directory for you. You can see four file in this directo
     (A original statistic mapping table between compute node and forwarding node)
 * job_cabid.py 
     (Use this script, you can get the cabinets that are used by the given job)            
-   > python job_cabid.py JOBID
+  > python job_cabid.py JOBID
 * job_ip.py
     (This script has many functions, you can obtain jobs' summary running status through this script)    
   > python job_ip.py time1 time2
