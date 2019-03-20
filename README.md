@@ -34,6 +34,8 @@ Prepare monitoring nodes (Beacon's client will collect data on these nodes), sto
 3. Deploy web server on the dedicated visualization node
 
 ## iii. Configuration
+Below will show how to configure Beacon's sotrage server after we install Elasticsearch, redis, logstash successfully. 
+
 Collect messages from monitoring programs  
 ```
   input {
