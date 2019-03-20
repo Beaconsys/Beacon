@@ -28,7 +28,7 @@ This part helps users to deploy Beacon on other clusters.
 6. Logstash-1.5 or above
 
 ## ii. Deployment
-Prepare monitoring nodes (Beacon's client will collect data on these nodes), storage nodes (Beacon's server will store all of data on these nodes), and  a dedicated visualization node (Optional, Beacon's web server will run on this node)
+Prepare monitoring nodes (Beacon's client will collect data on these nodes), storage nodes (Beacon's server will store data on these nodes), and  a dedicated visualization node (Beacon's web server will run on this node)
 1. Deploy monitoring daemons on monitoring nodes
 2. Deplot Elasticsearch + Redis + Logstash on storage nodes
 3. Deploy web server on the dedicated visualization node
@@ -105,7 +105,7 @@ Use Redis to cache messages
   ## vm-swap-file /tmp/redis.swap
 ```
 
-You can nearly use the default configuration. 
+We can nearly use the default configuration. 
 However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
 
 # Introduction of sys code
