@@ -1,23 +1,12 @@
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg
-        :target: https://www.usenix.org/system/files/nsdi19-yang.pdf
-----------        
+![Beacon icon](https://github.com/Beaconsys/Beacon/blob/master/icon/Beacon_icon.jpg)
 
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg
-        :target: http://www.en.sdu.edu.cn/
-        
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg  
-        :target: http://www.tsinghua.edu.cn/publish/thu2018en/index.html
-   
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg
-        :target: https://www.qcri.org.qa/
-        
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg
-        :target: http://www.emory.edu/home/index.html
-        
-.. image:: https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg
-        :target: http://www.nsccwx.cn/wxcyw/
+![sdu icon](https://github.com/Beaconsys/Beacon/blob/master/icon/sdu.jpg)
+![thu icon](https://github.com/Beaconsys/Beacon/blob/master/icon/thu.jpg)  
+![qcri icon](https://github.com/Beaconsys/Beacon/blob/master/icon/qcri.jpg)
+![emory icon](https://github.com/Beaconsys/Beacon/blob/master/icon/emory.jpg)
+![nscc icon](https://github.com/Beaconsys/Beacon/blob/master/icon/nscc.jpg)
 
-☤ Beacon 
+#Beacon 
 ------------
 
 Beacon is an end-to-end I/O resource monitoring and diagnosis system, for the 40960-node Sunway TaihuLight supercomputer, current ranked world No.3. Beacon simultaneously collects and correlates I/O tracing/profiling data from all the compute nodes, forwarding nodes, storage nodes and metadata servers. With mechanisms such as aggressive online+offline trace compression and distributed caching/storage, it delivers scalable, low-overhead, and sustainable I/O diagnosis under production use. 
