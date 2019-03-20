@@ -126,7 +126,7 @@ The released dataset is a sample 14-day (start from 2018-01-01, the total data s
 For more detailed information, please read [README](https://github.com/Beaconsys/Beacon/blob/master/data/README.md) in data directory.
 
 # Thank You
-Thanks for checking this library out! I hope you find it useful.
+Thanks for checking this project out! I hope you find it useful.
 Of course, there's always room for improvement. Feel free to [open an issue](https://github.com/Beaconsys/Beacon/issues) so we can make Beacon better, stronger, faster.
 
 Also, if you have any questions，contact us:
