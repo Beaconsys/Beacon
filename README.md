@@ -279,9 +279,9 @@ In this directory, we plan to open source our web code here, including the effic
   > python app.py
 * auth
     (This module is used for User Authentication. In our environment, we implement our user authentication based on LDAP. You can custom your own user authentication via modifying the auth.py file)    
-    * user.py
+    - user.py
         (This module contains the implementation of the User class used for flask_login module)
-    * auth.py
+    - auth.py
         (You can modify the validate_user() function to custom your own user authentication)
         ```
         def validate_user(username, passwd)
@@ -303,13 +303,13 @@ In this directory, we plan to open source our web code here, including the effic
         (This module querys monitoring data for the OST bandwidth.)
     - util.py
         (This module contains the auxiliary methods used for other modules, some examples are as follows:)
-.. code:: python
-
+        ```
         def get_query_para(jobid, stime = '', etime = '')
         def datetime_to_sec(xtime)
         def get_host_ip_list()
-        def get_index(stime, etime)           
-- templates
+        def get_index(stime, etime)
+        ```
+* templates
     (This directory contains the flask template HTML files.)
 
 # Itroduction of data
@@ -317,51 +317,51 @@ This directory is used to store open source data. Because data collected by Beac
 
 Step to obtain the data:
 
-- We put open source data on cloud
-- We share the link here 
-- Anyone can obtian these data by access the `link here <https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ>`_ with fetchCode ``8pja``
+* We put open source data on cloud
+* We share the link here 
+* Anyone can obtian these data by access the `link here <https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ>`_ with fetchCode ``8pja``
 
 We are now peaparing data and will open source gradually.
 
 Data categories are:(Data format are shown below)
 
-index-name  ||  data-type  ||  id  ||  score  ||  message  ||  @version  ||  @timestamp  ||  host
+`index-name  ||  data-type  ||  id  ||  score  ||  message  ||  @version  ||  @timestamp  ||  host`
 
 particularly ：message, timestamp, host
 
 In order to open source the data, we perform a mapping strategy. e.g:
-
+```
     Original:
     [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
     
     After mapping:
     [2018-09-10 14:16:52] T OPEN() /User146/6596814368836924247/-1160749754054947605/-8481035609384531935/2230746621555036977/756880090362066628/-1752974055252976644 =>  0x1200bd3f0
-    
-By the way, for **open opearation**: There may be two same open opearation in the trace. e.g:
-    
+```
+By the way, for `open opearation`: There may be two same open opearation in the trace. e.g:
+```    
     [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
     
     [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5
-    
+```    
 We can find that only one open operation has the file descriptor. The reason for this phenomenon is that one operation is the request initiator without file descriptor, and the other operation has alreadly received the request comletation signal with file descriptor.
 
 Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
 
-- ES_COMP
+* ES_COMP
     (Data collected by Beacon from compute nodes node by node)
-- ES_FWD1
+* ES_FWD1
     (Data collected by Beacon from default forwarding nodes)
-- ES_FWD2
+* ES_FWD2
     (Data collected by Beacon from rest forwarding nodes)
-- ES_MDS
+* ES_MDS
     (Data collected by Beacon from MDS)
-- ES_Latency
+* ES_Latency
     (Data collected by Beacon from forwarding nodes, on LWFS servers, including queue length and latency)
-- ES_OST1
+* ES_OST1
     (Data collected by Beacon from default storage nodes)
-- ES_OST2
+* ES_OST2
     (Data collected by Beacon from rest storage nodes)
-- Job
+* Job
     (Data collected by Beacon from applications running on the TaihuLight) 
     (PS: we are still applying for open sourece this part.)
     
@@ -372,11 +372,10 @@ Still doing...
 Data are gradually put on the clound.
 
 
-☤ Thank You
------------
+# Thank You
 
 Thanks for checking this library out! I hope you find it useful.
-Of course, there's always room for improvement. Feel free to `open an issue <https://github.com/Beaconsys/Beacon/issues>`_ so we can make Beacon better, stronger, faster.
+Of course, there's always room for improvement. Feel free to [open an issue](https://github.com/Beaconsys/Beacon/issues) so we can make Beacon better, stronger, faster.
 
 Also, if you have any questions，
 
