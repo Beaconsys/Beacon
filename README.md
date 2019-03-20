@@ -121,7 +121,7 @@ Step to obtain the data:
 * We share the link here 
 * Anyone can obtian these data by access the [link here](https://pan.baidu.com/s/1TasclvmkpqPDHmTTkKMFiQ) with fetchCode `8pja`
   
-The released dataset is a sample-14 day (start from 2018-01-01) multi-level I/O monitoring dataset from the [TaihuLight Supercomputer](http://performance.netlib.org/utk/people/JackDongarra/PAPERS/sunway-taihulight.pdf), currently the world's 3rd largest.
+The released dataset is a sample-14 day (start from 2018-01-01, the total data size is about 50GB compressed) multi-level I/O monitoring dataset from the [TaihuLight Supercomputer](http://performance.netlib.org/utk/people/JackDongarra/PAPERS/sunway-taihulight.pdf), currently the world's 3rd largest.
 For more detailed information, please read [README](https://github.com/Beaconsys/Beacon/blob/master/data/README.md) in data directory.
 
 # Thank You
