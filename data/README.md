@@ -1,4 +1,4 @@
-# Itroduction of data
+# Itroduction of released data
 
 ## Introduction of released dataset
 
@@ -8,7 +8,11 @@ Original data format are shown below:
 After data cleaning:
 `message || timestamp || host`
 
-In order to open source the data, we perform a mapping strategy. e.g:
+In order to release data, we perform a mapping strategy:
+1. Every file or directory will be instead by a hash value. 
+2. Every User will be instead by "Userxxx"
+
+Example:
 ```
     Original:
     [2018-09-10 14:16:52] T OPEN() /User_storage/job1/file1/file2/file3/file4/file5 => 0x1200bd3f0
@@ -24,7 +28,7 @@ By the way, for `open opearation`: There may be two same open opearation in the 
 ```    
 We can find that only one open operation has the file descriptor. The reason for this phenomenon is that one operation is the request initiator without file descriptor, and the other operation has alreadly received the request comletation signal with file descriptor.
 
-Every file or directory will be instead by a hash value. Every User will be instead by "Userxxx"
+
 
 ## Data categories
 
