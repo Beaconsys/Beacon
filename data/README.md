@@ -42,7 +42,7 @@ Every file or directory will be instead by a hash value. Every User will be inst
     (Data collected by Beacon from applications running on the TaihuLight) 
     (PS: we are still applying for open sourece this part.)
     
-Detail data format can be decrised in this ~[Figure](https://github.com/Beaconsys/Beacon/blob/master/icon/Dataformat.png)
+Detail data format can be decrised in this ![Figure](https://github.com/Beaconsys/Beacon/blob/master/icon/Dataformat.png)
 
 We will continue to open source our data, including many fields.  
 
