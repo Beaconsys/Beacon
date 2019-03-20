@@ -272,7 +272,7 @@ In this derictory, we will open source our other util code here.
 ## 4 Web_interface
 In this directory, we will open source our code which is used to show our users a websizte to make Beacon easy-to-use. For more detail inforamtion, just read README in this derectory
 
-### 4.1 About web interface directory
+### 4.1 Web interface directory
 In this directory, we plan to open source our web code here, including the efficient cache strategy.
 * app.py
     (This is the main program entry, to launch our Beacon monitoring application server, please run the following command:)
