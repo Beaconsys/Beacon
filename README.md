@@ -127,6 +127,7 @@ First, we introduce job directory for you. You can see four file in this directo
 * job_ip.py
     (This script has many functions, you can obtain jobs' summary running status through this script)    
   > python job_ip.py time1 time2
+  
   > python job_ip.py JOBID
 * jobcount_coreutilize.py
     (This script is used to calculate jobs' core-hour, which can also be used to calcute users' cost)
