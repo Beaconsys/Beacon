@@ -28,16 +28,15 @@ Beacon can be easily deployed on other clusters.
 5. Redis-3.0 or above
 6. Logstash-1.5 or above
 
-## ii. Deploy
-Prepare monitoring nodes (Beacon's client will collect data on these nodes), storage nodes (Beacon's server will storage all of data on these nodes), and visualization server (Optional, visualization server will support the web interface)
+## ii. Deployment
+Prepare monitoring nodes (Beacon's client will collect data on these nodes), storage nodes (Beacon's server will store all of data on these nodes), and  a dedicated visualization node (Optional, Beacon's web server will run on this node)
 1. Deploy monitoring daemons on monitoring nodes
 2. Deplot Elasticsearch + Redis + Logstash on storage nodes
-3. Deploy web server on visualization server
+3. Deploy web server on the dedicated visualization node
 
-
+## iii. Configuration
 Collect messages from monitoring programs  
-::
-
+```
   input {
            file {
                    type => "lala test"
@@ -67,10 +66,10 @@ Collect messages from monitoring programs
                   key => 'logstash:redis'
           }
    }
-  
-Extract message from Redis and store it to the Elasticsearch  
-::
+```
 
+Extract message from Redis and store it to the Elasticsearch  
+```
   input {
         redis {
                 host => 'localhost'
@@ -91,10 +90,10 @@ Extract message from Redis and store it to the Elasticsearch
                 cluster=> "elasticsearch_cluster"
         }
    }
-  
+```
+
 Use Redis to cache messages  
-::
- 
+``` 
   pidfile /var/run/redis.pid
   port 6379
   timeout 0
@@ -103,7 +102,8 @@ Use Redis to cache messages
   dbfilename dump.rdb
   dir /root/ELK/redis/db/
   ## vm-swap-file /tmp/redis.swap
-  
+```
+
 You can nearly use the default configuration. 
 However, remember to set the same cluster name and ensure these backend nodes are in the same network segment.
 
