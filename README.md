@@ -117,7 +117,7 @@ In this directory, we will open source our code which is used to analysis these 
 ### 1.1 Analysis_script directory
 These scripts are all our scripts to deal with mass data collected by Beacon, including scripts query ES(LWFS, lustre), mysql(job database). We classify these scripts in to serveral categories as you can see some subdirectories in this directory.
 
-### 1.2 About Job directory
+### 1.2 Job directory
 First, we introduce job directory for you. You can see four file in this directory.
 * COMPID_CabinetID 
     (A original statistic mapping table between compute node and forwarding node)
@@ -126,27 +126,22 @@ First, we introduce job directory for you. You can see four file in this directo
    > python job_cabid.py JOBID
 * job_ip.py
     (This script has many functions, you can obtain jobs' summary running status through this script)    
-   > python job_ip.py time1 time2
-   > python job_ip.py JOBID
+  > python job_ip.py time1 time2
+  > python job_ip.py JOBID
 * jobcount_coreutilize.py
     (This script is used to calculate jobs' core-hour, which can also be used to calcute users' cost)
-   > python jobcount_coreutilize.py time1 time2
+  > python jobcount_coreutilize.py time1 time2
  
-. About LWFS_client directory
------------- 
-
+### 1.3 LWFS_client directory
 In this directory, you can find many scripts to operate data on the compute node.
 
-- abnormal_node_detect.py 
-   (This script is used to detect abnormal nodes by the given jobid)
-.. code:: python
-        
-        python abnormal_node_detect.py JOBID
-        # use jobid list, this script can detect anomaly automatically 
-- deal gnenrator.py
+* abnormal_node_detect.py 
+   (This script is used to detect abnormal nodes by the given jobid) 
+  > python abnormal_node_detect.py JOBID
+  > # use jobid list, this script can detect anomaly automatically 
+* deal gnenrator.py
     (This script includes many function, is used to deal various messages)
-.. code:: python
-
+````
         def fwd_deal_message(ost_message, ost_time, start_time, end_time)
         def ost_deal_message(ost_message, ost_time, start_time, end_time)
         def deal_part_message(resultr, resultw, result_open, result_close, \
@@ -156,43 +151,33 @@ In this directory, you can find many scripts to operate data on the compute node
         def deal_all_message(results_message, results_host, min_time, max_time)
         def deal_single_message_fd(results_message)
         def deal_single_message(results_message)
-- es_search.py 
+````
+* es_search.py 
     (A function, including query body)
-.. code:: python
-
-        def search(time_start, time_end, host, index, host_t)
-- es_search_fwd.py
+        `def search(time_start, time_end, host, index, host_t)`
+* es_search_fwd.py
     (Query body)
-.. code:: python
-
-        def search_interval(time_s, time_e, fwd, host, index, host_t)
-- es_search_ost.py
+        `def search_interval(time_s, time_e, fwd, host, index, host_t)`
+* es_search_ost.py
     (Query body)
-.. code:: python
-        def search_interval(time_s, time_e, host, index, host_t)
-- job_ip_all.py
+        `def search_interval(time_s, time_e, host, index, host_t)`
+* job_ip_all.py
     (This script has many functions, you can obtain jobs' summary running status through this script)
-.. code:: python
-    
-        python job_ip.py time1 time2
-        python job_ip.py JOBID
-- savejob_jobid_modified.py
+        > python job_ip.py time1 time2
+        > python job_ip.py JOBID
+* savejob_jobid_modified.py
     (A function, used to save job's data which has been queried and dealed) 
-- scroll_query.py
+* scroll_query.py
     (Query body)
-- showjob_by_jobid.py
+* showjob_by_jobid.py
     (This script is used to search job's running status and I/O performance by the given jobid)
-.. code:: python
-        
-        python showjob_by_jobid.py JOBID
-- time_to_sec.py
+        > python showjob_by_jobid.py JOBID
+* time_to_sec.py
     (A function is used to time transformation)
-.. code:: python
-
-        day_time = time.strptime(time_given, '%Y-%m-%d %H:%M:%S')
-        def time_to_sec(day_time)
+        > day_time = time.strptime(time_given, '%Y-%m-%d %H:%M:%S')
+        > def time_to_sec(day_time)
         
-. About LWFS_server directory
+### 1.4 LWFS_server directory
 ------------
 
 There are 4 files in this directory, including
