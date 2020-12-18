@@ -188,4 +188,4 @@ Of course, there's always room for improvement. Feel free to [open an issue](htt
 
 Also, if you have any questions，contact us:
 
-Email: tianyuzhang1214@163.com.
+Email: bin.yang@mail.sdu.edu.com.
